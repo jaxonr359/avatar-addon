@@ -1,0 +1,21 @@
+{
+  "format_version":"1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "a:dirt_block_small",
+      "materials": {
+        "default": "entity"
+      },
+      "textures": {
+        "default": "textures/entity/dirt_block_small"
+      },
+      "particle_effects": {
+        "earth_collect": "a:earth_collect_small"
+      },
+      "geometry": {
+        "default": "geometry.dirt_block_small"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

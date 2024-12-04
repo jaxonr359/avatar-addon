@@ -1,0 +1,202 @@
+{
+  "namespace": "glui_default_modal_form",
+
+  "default_modal_form_content@glui_common.default_scrollbar": {
+    "size": [ "100%", "100%" ],
+    
+    "$show_background": false,
+    "$scrolling_content": "glui_default_modal_form.default_modal_form_scrolling_content"
+  },
+
+  "default_modal_form_scrolling_content": {
+    "type": "stack_panel",
+    "size": [ "94%", "100%c + 10px" ],
+    "offset": [ "3%", 5 ],
+
+    "controls": [
+      { "main_content@generated_contents": {} },
+      {
+        "submit_button@glui_common.glui_light_button": {
+          "size": [ "100%", 32 ],
+       
+          "$button_text": "#submit_text",
+          "$button_label_binding_type": "global",
+          
+          "$pressed_button_name": "button.submit_custom_form",
+          "$button_content": "glui_default_modal_form.button_label",
+
+          "$default_content_offset": [ 0, -1 ],
+          "$hover_content_offset": [ 0, -1 ],
+
+          "bindings": [
+            {
+              "binding_name": "#submit_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_label": {
+    "type": "label",
+    "text": "standard.buttons.save",
+
+    "text_alignment": "center",
+    "layer": 10, // To show the text when button is hovered
+    
+    "$button_label_collection|default": "form_buttons",
+    "$button_label_binding_type|default": "collection",
+    
+    "size": [ "100% - 2px", "default" ],
+    "max_size": [ "100% - 2px", "100% - 4px" ],
+    "color": [ 1, 1, 1 ],
+
+    "bindings": [
+      {
+        "binding_name": "$button_text",
+        "binding_collection_name": "$button_label_collection",
+        "binding_type": "$button_label_binding_type"
+      }
+    ]
+  },
+
+  "generated_contents": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+
+    "factory": {
+      "name": "buttons",
+      "control_ids": {
+        "label": "@server_form.custom_label",
+        "toggle": "@glui_default_modal_form.custom_toggle",
+        "slider": "@server_form.custom_slider",
+        "step_slider": "@server_form.custom_step_slider",
+        "dropdown": "@glui_default_modal_form.custom_dropdown",
+        "input": "@glui_default_modal_form.custom_input"
+      }
+    },
+
+    "collection_name": "custom_form",
+    "bindings": [
+      {
+        "binding_name": "#custom_form_length",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  // TOGGLE
+
+  "option_toggle_on@settings_common.option_toggle_state_template": { "texture": "textures/ui/glui/toggles/toggle_on" },
+  "option_toggle_off@settings_common.option_toggle_state_template": { "texture": "textures/ui/glui/toggles/toggle_off" },
+  "option_toggle_on_hover@settings_common.option_toggle_state_template": { "texture": "textures/ui/glui/toggles/toggle_on_hover" },
+  "option_toggle_off_hover@settings_common.option_toggle_state_template": { "texture": "textures/ui/glui/toggles/toggle_off_hover" },
+  "option_toggle_on_locked@settings_common.option_toggle_on": { "texture": "textures/ui/glui/toggles/toggle_on_disabled" },
+  "option_toggle_off_locked@settings_common.option_toggle_off": { "texture": "textures/ui/glui/toggles/toggle_off_disabled" },
+
+  "custom_option_toggle@settings_common.option_toggle_control": {
+    "$unchecked_control": "glui_default_modal_form.option_toggle_off",
+    "$checked_control": "glui_default_modal_form.option_toggle_on",
+    "$unchecked_hover_control": "glui_default_modal_form.option_toggle_off_hover",
+    "$checked_hover_control": "glui_default_modal_form.option_toggle_on_hover",
+    "$unchecked_locked_control": "glui_default_modal_form.option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "glui_default_modal_form.option_toggle_off_locked",
+    "$checked_locked_control": "glui_default_modal_form.option_toggle_on_locked",
+    "$checked_locked_hover_control": "glui_default_modal_form.option_toggle_on_locked"
+  },
+
+  "custom_toggle@server_form.custom_toggle": { "$control_name": "glui_default_modal_form.custom_option_toggle" },
+
+  // TEXT-FIELD
+
+  "edit_box_indent": {
+    "type": "image",
+    "texture": "textures/ui/glui/edit_box/edit_box_indent",
+    "alpha": "$alpha",
+    "$alpha|default": 1.0
+  },
+
+  "edit_box_indent_hover@common.edit_box_indent": {
+    "texture": "textures/ui/glui/edit_box/edit_box_indent_hover"
+  },
+
+  "custom_option_text_edit@settings_common.option_text_edit_control": {
+    "$text_background_default": "glui_default_modal_form.edit_box_indent",
+    "$text_background_hover": "glui_default_modal_form.edit_box_indent_hover",
+    "$text_edit_box_label_offset": [ 1, 0 ]
+  },
+
+  "custom_input@server_form.custom_input": { "$control_name": "glui_default_modal_form.custom_option_text_edit" },
+
+  // DROPDOWN
+
+  "dropdown_background": {
+    "type": "image",
+    "texture": "textures/ui/glui/dropdown/dropdown_background"
+  },
+
+  "custom_dropdown_toggle@settings_common.options_dropdown_toggle_control": {
+    "$default_chevron": "textures/ui/glui/dropdown/dropdown_chevron",
+    "$default_chevron_hover": "textures/ui/glui/dropdown/dropdown_chevron_white",
+    "$default_chevron_nohover": "$default_chevron",
+
+    "$default_texture": "textures/ui/glui/buttons/light_button_default",
+    "$hover_texture": "textures/ui/glui/buttons/light_button_pressed",
+    "$pressed_texture": "textures/ui/glui/buttons/light_button_hover",
+    "$pressed_no_hover_texture": "textures/ui/glui/buttons/light_button_hover"
+  },
+
+  "custom_option_dropdown@settings_common.option_dropdown_control": {
+    "$dropdown_background_control": "glui_default_modal_form.dropdown_background",
+    "controls": [
+      {
+        "dropdown@$option_dropdown_type": {
+          "$dropdown_toggle": "glui_default_modal_form.custom_dropdown_toggle",
+          "$dropdown_background": "$dropdown_background_control",
+          // you need to specify the content with "$dropdown_content"
+          "$dropdown_content|default": "unset_dropdown_content",
+          // you need to specify a unique name with "$dropdown_name"
+          "$dropdown_name|default": "unset $dropdown_name",
+          // you need to specify a the label with "$options_dropdown_toggle_label_binding"
+          "$options_dropdown_toggle_label_binding|default": "unset $options_dropdown_toggle_label_text",
+          "$locked_alpha": 0.5,
+          "$toggle_tts_header": "$option_label"
+        }
+      }
+    ]
+  },
+
+  "custom_dropdown": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "dropdown@settings_common.option_dropdown": {
+          "$dropdown_content": "server_form.custom_dropdown_content",
+          "$dropdown_area": "generated_contents",
+          "$dropdown_name": "custom_dropdown",
+
+          "$control_name": "glui_default_modal_form.custom_option_dropdown",
+          
+          "$toggle_binding_type": "collection",
+          "$toggle_grid_collection_name": "custom_form",
+          "$options_dropdown_toggle_label_binding": "#dropdown_option_text",
+          "$options_dropdown_toggle_label_binding_type": "collection",
+          "$options_dropdown_toggle_label_binding_collection_name": "custom_form",
+          "$dropdown_scroll_content_size": [ "100%", "200%" ],
+
+          "$option_label": "#custom_text",
+          "$label_bindings": [
+            {
+              "binding_name": "#custom_text",
+              "binding_type": "collection",
+              "binding_collection_name": "custom_form"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

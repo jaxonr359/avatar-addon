@@ -1,0 +1,21 @@
+{
+  "format_version":"1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "a:ice_block",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/ice_block"
+      },
+      "particle_effects": {
+        "earth_collect": "a:water_collect"
+      },
+      "geometry": {
+        "default": "geometry.dirt_block"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

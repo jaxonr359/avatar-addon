@@ -1,0 +1,15 @@
+{
+  "ui_defs": [ 
+    "ui/glui/glui_common.json", 
+    // FORMS
+    "ui/glui/forms/skill_tree.json",
+    "ui/glui/forms/container_slots.json",
+    "ui/glui/forms/grid_2_row.json",
+    "ui/glui/forms/default_form.json",
+    "ui/glui/forms/default_modal_form.json",
+    "ui/glui/forms/tutorial_form.json",
+    "ui/cooldowns/cooldown_bar.json",
+    "ui/cooldowns/cooldown_bar_uv.json",
+    "ui/tutorial.json"
+  ]
+}

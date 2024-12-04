@@ -1,0 +1,18 @@
+{
+  /****************************************
+           FORM GENERAL PROPERTIES
+  ****************************************/
+  
+  "$general_form_size": [ 240, 188 ], // The sizes of all forms, not including side-buttons
+
+  /****************************************
+                  FORM FLAGS
+  ****************************************/
+
+  "$glitch_skill_tree_form": "§s§t",
+  "$glitch_container_slots_form": "§c§s",
+  "$glitch_grid2row_form": "§c§b",
+  "$glitch_default_form": "§d§f",
+  "$glitch_default_modal_form": "§m§f",
+  "$glitch_tutorial_form": "§t§f"
+}

@@ -1,0 +1,1111 @@
+pack.name=§6Avatar §3Addon §8[BETA]§r
+pack.description=This addon adds the bending abilities from the show Avatar: The Last Airbender to Minecraft! Made by: GlitchyTurtle
+
+## Items
+item.a:bending_scroll=Bending Scroll
+item.a:empty_cup=Empty Cup
+item.a:water_cup=Cup of Water
+item.a:black_tea=Black Tea
+item.a:chi_tea=Chi Tea
+item.a:ginger_tea=Ginger Tea
+item.a:ginseng_tea=Ginseng Tea
+item.a:green_tea=Green Tea
+item.a:jasmine_tea=Jasmine Tea
+item.a:lychee_tea=Lychee Tea
+item.a:nomad_tea=Nomad Tea
+item.a:oolong_tea=Oolong Tea
+item.a:red_blooded_nephew_tea=Red Blooded Nephew Tea
+item.a:spirit_tea=Spirit Tea
+item.a:white_dragon_tea=White Dragon Tea
+item.a:white_jade_tea=White Jade Tea
+item.a:white_lotus_tea=White Lotus Tea
+item.a:white_tea=White Tea
+
+## New enchants
+enchantment.protect.projectile=Bending Resistance
+
+## Elements
+elements.air.short=Air
+elements.earth.short=Earth
+elements.fire.short=Fire
+elements.water.short=Water
+elements.avatar.short=Avatar
+elements.nonbender.short=Nonbender
+
+elements.air.name=Airbending
+elements.earth.name=Earthbending
+elements.fire.name=Firebending
+elements.water.name=Waterbending
+
+elements.air.description=Air is the element of freedom. The Air Nomads detached themselves from worldly concerns, and they found peace and freedom.
+elements.earth.description=Earth is the element of substance. The people of the Earth Kingdom are diverse and strong. They are persistent and enduring.
+elements.fire.description=Fire is the element of power. The people of the Fire Nation have desire and will, and the energy and drive to achieve what they want.
+elements.water.description=Water is the element of change. The people of the Water Tribes are capable of adapting to many things.
+elements.avatar.description=The avatar is the master of all four elements. It is their duty to bring balance to the world.
+elements.nonbender.description=Nonbenders are people who are not born with the ability to bend an element. They are still capable of great things.
+
+elements.air.breakdown=Airbending is the right element for you if you value movement and survival utility over player vs player fighting and damage.
+elements.earth.breakdown=Earthbending is the right element for you if you value defense and strong attacks over movement. Earthbending is also great for mining!
+elements.fire.breakdown=Firebending is the right element for you if you value high damage over defense. Firebending is very quick, and it's the undisputed king of damage.
+elements.water.breakdown=Waterbending is the right element for you if you value utility and balance. It's not the best in any one specific category, but it's pretty good at everything.
+elements.avatar.breakdown=The Avatar can also enter the Avatar State. It's a no-brainer if you're playing on a server that allows you to be the Avatar, you should definitely choose it.
+elements.nonbender.breakdown=Nonbenders can learn chi blocking, which is a technique that allows them to temporarily disable a bender's bending abilities.
+
+## Tutorial
+tutorial.main.continue=Continue
+tutorial.main.1=Welcome to Avatar Addon!
+tutorial.main.2=To get started, right click (or long press) on your bending scroll.
+tutorial.main.3=This will allow you to choose your element, change your moveset, and more!
+tutorial.main.4=Bending is powered by chi, which you can see above your hunger bar.
+tutorial.main.5=To use your bending abilities, you'll need to bind them to your hotbar slots.
+tutorial.main.6=That means doing a specific action while that slot is selected will activate the move.
+tutorial.main.7=To bind a move, open your bending scroll and go to the choose slots page.
+tutorial.main.8=From there, you can select a move and then select a hotbar slot to bind it to.
+tutorial.main.9=You can also save and load movesets to quickly switch between sets of moves.
+tutorial.main.10=There are 3 main types of moves: standard, charged, and toggle.
+tutorial.main.11=Standard moves are quick and easy to use, just do the action and the move will activate.
+tutorial.main.12=Charged moves require you to hold the action while your chi goes down.
+tutorial.main.13=When you release the action, the move will activate with the amount of chi you used.
+tutorial.main.14=Toggle moves are moves that you can activate and deactivate by doing the action again.
+tutorial.main.15=Toggle moves will continue to use chi while active, so be careful!
+tutorial.main.16=You start with 1 move, but can unlock more just by bending.
+tutorial.main.17=By landing consecutive hits, you charge up your focus bar.
+tutorial.main.18=When the focus bar is full, you'll enter chi overflow!
+tutorial.main.19=This will give you a temporary boost to your chi regeneration and move damage.
+tutorial.main.20=Oh, and you can block moves by sneaking right before they hit you!
+tutorial.main.21=You can also see your current level and experience on the stats page.
+tutorial.main.22=Good luck, and have fun absolutely destroying your enemies!
+
+## Debug
+debug.message.damage=Debug Damage: %s, Player Damage: %s
+
+## HUD UI
+hud.sidebar.slots=Slots
+hud.sidebar.empty=Empty
+hud.disabled=Bending Disabled
+hud.no_bending_zone=Nonbending Zone
+
+## General Status Messages
+status_message.chi_overflow_enter=You are overflowing with chi! Go all out!
+status_message.chi_overflow_exit=You are no longer overflowing with chi.
+status_message.boundary=You've reached the world boundary! Turn back!
+scroll.level_up=You leveled up to level %s!
+scroll.level_up_unlock=You unlocked a new move:
+status_message.no_bending_zone.enter=You've entered a nonbending zone! Your bending abilities are disabled.
+status_message.no_bending_zone.exit=You've left the nonbending zone! Your bending abilities are enabled.
+status_message.block_perfect.blocker=Perfect Block!
+status_message.block.perfect.blocked=Your attack was perfectly blocked!
+status_message.combat_timer_up=You're safe to leave the game now!
+status_message.combat_timer_down=You're in combat! Don't leave the game or you will be killed!
+status_message.combat_timer_nope=You can't do that while you're in combat!
+status_message.combat_logged=You were killed for being in combat!
+status_message.chi_blocked_target=You've been chi-blocked!
+status_message.chi_blocked_attacker=Chiblocked for 6 secconds!
+
+## Standard Buttons
+standard.buttons.next=Next
+standard.buttons.back=Back
+standard.buttons.save=Save
+standard.buttons.cancel=Cancel
+standard.buttons.confirm=Confirm
+standard.buttons.close=Close
+
+## Choose Element
+scroll.choose_element.title=Choose Bending Style
+scroll.choose_element.error=You need to choose an element to first!
+stats.player_no_element.error=That player doesn't have an element yet, so there's no stats to show!
+scroll.choose_element.select=Choose
+scroll.choose_element.starting_element=Choose Starting Element
+scroll.choose_element.starting_element_desc=As the Avatar, you can choose any element to start with. This will determine your starting moves and style. The other elements order will be determined by the cycle of elements.
+
+## Choose Slots
+scroll.choose_slots.title=Choose Slots
+scroll.choose_slots.description=Select a move to bind to a slot!
+scroll.choose_slots.slot=Choose Move
+scroll.choose_slots.binding=Choose Binding
+scroll.choose_slots.info.title=Choose Slots Info
+scroll.choose_slots.info.whatare=What are slots?
+scroll.choose_slots.info.whatare.desc=Slots are the hotbar slots (seen on the far right tab) that you can bind moves (the first column to the left, 'Choose Move') to. When you do the a certain action while that slot is selected/hovered on, that move will activate. The action is also set by you, in the second column ('Choose Binding').
+scroll.choose_slots.info.howto=How do I bind a move?
+scroll.choose_slots.info.howto.desc=First, select a slot from the far right tab (corresponds to your hotbar slots 1-9). That means whatever move you pick will be bound to your chosen slot. To bind a move, select a move from the first column ('Choose Move'), then select a slot from the second column ('Choose Binding').
+scroll.choose_slots.info.save=What are movesets?
+scroll.choose_slots.info.save.desc=Movesets are a way to save and load your current bindings. This is useful if you want to switch between different sets of moves quickly. To save or load a moveset, click the 'Movesets' button.
+
+## Slots
+elements.slots.1=Slot 1
+elements.slots.2=Slot 2
+elements.slots.3=Slot 3
+elements.slots.4=Slot 4
+elements.slots.5=Slot 5
+elements.slots.6=Slot 6
+elements.slots.7=Slot 7
+elements.slots.8=Slot 8
+elements.slots.9=Slot 9
+
+## Movesets Menu
+scroll.choose_slots.movesets.title=Movesets Menu
+scroll.choose_slots.movesets.description=Select a moveset to load or save your current bindings to!
+scroll.choose_slots.movesets.save=Save
+scroll.choose_slots.movesets.load=Load
+scroll.choose_slots.movesets.delete=Delete
+scroll.choose_slots.movesets.presets=Presets
+
+## Stats
+scroll.move_info.title=Move Info
+scroll.move_info.description=Select a move to see more information about it!
+scroll.move_info.breakdown=Element Breakdown
+scroll.statsmenu.title=Stats Menu
+scroll.statsmenu.description=Select a player to view their stats!
+scroll.utility.title=Utility
+scroll.utility.description=Select an option to open another menu!
+
+## Move Bindings
+elements.bindings.double_sneak=Double Sneak
+elements.bindings.right_click=Right Click
+elements.bindings.sneak_punch=Sneak Punch
+elements.bindings.punch=Punch
+elements.bindings.look_down_punch=Look Down Punch
+elements.bindings.look_up_sneak=Look Up Sneak
+elements.bindings.look_down_sneak=Look Down Sneak
+elements.bindings.look_up_punch=Look Up Punch
+elements.bindings.double_jump=Double Jump
+elements.bindings.sneak_jump=Sneak Jump
+
+## Types
+elements.style.name=Bending Style Name
+elements.style.description=Bending Style Description
+elements.move.name=Name
+elements.move.cost=Chi Cost
+elements.move.cooldown=Cooldown
+elements.move.description=Description
+elements.move.type=Type
+elements.move.type.standard=Standard
+elements.move.type.charge=Charged
+elements.move.type.duration=Toggle
+elements.move.player_damage=Player Damage
+elements.move.mob_damage=Mob Damage
+elements.stats.level=Level
+elements.stats.style=Style
+elements.stats.moveset=Moveset
+elements.stats.bindings=Bindings
+elements.stats.progress=Progress to Next Level
+elements.stats.timesincejoined=Time Since Joined
+elements.stats.topmoves=Top 5 Moves
+elements.stats.kills=Kills
+elements.stats.deaths=Deaths
+
+
+## Moveset
+scroll.choose_slots.movesets.create.title=Create Moveset
+scroll.choose_slots.movesets.create.description=Moveset Name:
+scroll.choose_slots.movesets.create.placeholder=Travelling Moveset
+scroll.choose_slots.movesets.create.toolong=The moveset name is too long! Keep it at %s characters or less.
+scroll.choose_slots.movesets.create.tooshort=The moveset name is too short! Keep it %s character or more.
+scroll.choose_slots.movesets.create.exists=This moveset already exists!
+scroll.choose_slots.movesets.create.toomany=You have too many movesets! You can only have %s.
+scroll.choose_slots.movesets.create.success=Successfully created the moveset %s!
+scroll.choose_slots.movesets.create.exit=You exited the moveset menu without creating a moveset!
+scroll.choose_slots.movesets.load.title=Load Moveset
+scroll.choose_slots.movesets.load.description=Select a moveset to load!
+scroll.choose_slots.movesets.load.success=Successfully loaded the moveset %s!
+scroll.choose_slots.movesets.load.exit=You exited the moveset menu without loading a moveset!
+scroll.choose_slots.movesets.load.none=You don't have any movesets to load!
+scroll.choose_slots.movesets.delete.title=Delete Moveset
+scroll.choose_slots.movesets.delete.description=Select a moveset to delete!
+scroll.choose_slots.movesets.delete.success=Successfully deleted the moveset %s!
+scroll.choose_slots.movesets.delete.exit=You exited the moveset menu without deleting a moveset!
+scroll.choose_slots.movesets.delete.none=You don't have any movesets to delete!
+
+## Homes
+scroll.statsmenu.homes.title=Homes
+scroll.statsmenu.homes.create.title=Create
+scroll.statsmenu.homes.create.description=Home Name:
+scroll.statsmenu.homes.create.placeholder=Village House
+scroll.statsmenu.homes.create.toolong=The home name is too long! Keep it at %s characters or less.
+scroll.statsmenu.homes.create.tooshort=The home name is too short! Keep it %s character or more.
+scroll.statsmenu.homes.create.exists=This home already exists!
+scroll.statsmenu.homes.create.toomany=You have too many homes! You can only have %s.
+scroll.statsmenu.homes.create.success=Successfully saved the home %s!
+scroll.statsmenu.homes.create.exit=You exited the home menu without saving a home!
+scroll.statsmenu.homes.load.title=Teleport
+scroll.statsmenu.homes.load.description=Select a home to teleport to!
+scroll.statsmenu.homes.load.success=Successfully teleported the home %s!
+scroll.statsmenu.homes.load.exit=You exited the home menu without teleporting to a home!
+scroll.statsmenu.homes.load.none=You don't have any homes to teleport to!
+scroll.statsmenu.homes.delete.title=Delete
+scroll.statsmenu.homes.delete.description=Select a home to remove!
+scroll.statsmenu.homes.delete.success=Successfully removed the home %s!
+scroll.statsmenu.homes.delete.exit=You exited the home menu without removing a home!
+scroll.statsmenu.homes.delete.none=You don't have any homes to remove!
+
+## Reset Slots
+scroll.choose_slots.reset.title=Reset Slots
+scroll.choose_slots.reset.description=Pick an option to reset your slots!
+scroll.choose_slots.reset.all=Reset All Slots
+scroll.choose_slots.reset.current=Reset Current Slot
+scroll.choose_slots.reset.current.success=Successfully reset the current slot!
+scroll.choose_slots.reset.all.success=Successfully reset all slots!
+
+## Teams
+scroll.teams.title=Teams
+scroll.teams.description.base=Join or create a team!
+scroll.teams.description.member=View or leave your team!
+scroll.teams.description.owner=Manage or disband your team!
+scroll.teams.create=Create
+scroll.teams.join=Join Public
+scroll.teams.invites=Invites
+scroll.teams.create_team.title=Create Team
+scroll.teams.create_team.description=Team Name:
+scroll.teams.create_team.placeholder=The Gaang
+scroll.teams.create_team.toolong=The team name is too long! Keep it at %s characters or less.
+scroll.teams.create_team.tooshort=The team name is too short! Keep it %s character or more.
+scroll.teams.create_team.exists=This team name already exists!
+scroll.teams.create_team.exit=You exited the team menu without creating a team!
+scroll.teams.create_team.success=Successfully created the team %s!
+scroll.teams.name.title=Edit Team Name
+scroll.teams.name.exit=You exited the team menu without updating the name!
+scroll.teams.name.success=Successfully updated the team name!
+scroll.teams.description.title=Edit Team Description
+scroll.teams.description.description=Team Description:
+scroll.teams.description.placeholder=We're the best team in the world!
+scroll.teams.description.toolong=The team description is too long! Keep it at %s characters or less.
+scroll.teams.description.tooshort=The team description is too short! Keep it %s character or more.
+scroll.teams.description.exit=You exited the team menu without updating the description!
+scroll.teams.description.success=Successfully updated the team description!
+scroll.teams.join_team.title=Join Team
+scroll.teams.join_team.description=Select a team to join!
+scroll.teams.join_team.success=Successfully joined the team %s!
+scroll.teams.my_team=My Team
+scroll.teams.members=Members
+scroll.teams.invite=Invite
+scroll.teams.teleport=Teleport
+scroll.teams.settings=Settings
+scroll.teams.disband=Disband
+scroll.teams.my_team.team_name=Name
+scroll.teams.my_team.team_member_count=Members
+scroll.teams.my_team.team_owner=Owner
+scroll.teams.my_team.team_creation_date=Creation
+scroll.teams.my_team.team_desc=Description
+scroll.teams.name=Edit Name
+scroll.teams.description=Edit Description
+scroll.teams.members.title=Team Members
+scroll.teams.member.title=Team Members
+scroll.teams.members.description=Select a player to view their details!
+scroll.teams.member.description=Select to promote or kick this player from your team.
+scroll.teams.member.promote=Transfer Ownership
+scroll.teams.member.kick=Kick
+scroll.teams.member.promote.owner=You're already the owner of this team!
+scroll.teams.member.promote.success=Successfully promoted %s to owner!
+scroll.teams.member.kick.owner=You can't kick yourself from the team!
+scroll.teams.member.kick.success=Successfully kicked %s from the team!
+scroll.teams.member.kick.kicked=You've been kicked from the team %s!
+scroll.settings.teams.title=Team Settings
+scroll.settings.teams.public=Public Joins Enabled
+scroll.settings.teams.friendly_fire=Friendly Fire Enabled
+scroll.settings.teams.teleports=Teleports Enabled
+scroll.settings.teams.public.short=Public Joins
+scroll.settings.teams.friendly_fire.short=Friendly Fire
+scroll.settings.teams.teleports.short=Teleports
+scroll.settings.quick.public_changed=Updated team visibility to %s.
+scroll.settings.quick.friendly_fire_changed=Updated friendly fire to %s.
+scroll.settings.quick.teleports_changed=Updated teleportation to %s.
+scroll.teams.invites.title=Invites
+scroll.teams.invites.description=Select either to invite a player to your team, or to withdraw an invite.
+scroll.teams.invites.invite_players=Invite Players
+scroll.teams.invites.delete_invites=Delete Invites
+scroll.teams.joined.success=Successfully joined the team %s!
+scroll.teams.leave.success=Successfully left the team %s!
+scroll.teams.leave=Leave Team
+scroll.teams.teleports.title=Teleports
+scroll.teams.teleports.description=Send a teleport request to a team member, or accept a request from a team member.
+scroll.teams.teleports.send_request=Send Request
+scroll.teams.teleports.accept_requests=Accept Requests
+scroll.teams.accept_request.title=Accept Request
+scroll.teams.accept_request.description=Select a request to accept, if you accept it, the player will be teleported to you instantly.
+scroll.teams.send_request.title=Send Request
+scroll.teams.send_request.description=Select a player to send a teleport request to. They'll have to accept it for the teleport to go through.
+scroll.teams.send_request.self=You can't send a teleport request to yourself!
+scroll.teams.send_request.received=You've received a teleport request from %s!
+scroll.teams.send_request.sent=You sent a teleport request to %s!
+scroll.teams.accept_request.success=Successfully accepted the teleport request from %s!
+scroll.teams.accept_request.success.player=Successfully teleported to %s!
+scroll.teams.teleports.disabled=Teleports are disabled for this team!
+scroll.teams.disband.success=Successfully disbanded the team %s!
+scroll.teams.disband.member=Your team has been disbanded!
+scroll.teams.public.title=Public Joins
+scroll.teams.public.description=Join a public team!
+scroll.teams.invite_player.title=Invite Player
+scroll.teams.invite_player.description=Click a player to invite them to your team!
+scroll.teams.invite.already_invited=You've already invited this player to your team!
+scroll.teams.invite.already=This player is already on your team!
+scroll.teams.invite.success=Successfully sent an invite to %s!
+scroll.teams.invite.sent=You've been invited to join the team %s!
+scroll.teams.invite.full=This team is full, so you can't invite any more players!
+scroll.teams.remove_invites.title=Remove Invites
+scroll.teams.remove_invites.description=Select a player to widthdraw their invite.
+scroll.teams.remove_invites.success=Successfully withdrew the invite to %s!
+scroll.teams.member.username=Username
+scroll.teams.member.offline=Offline
+scroll.teams.member.online=Online
+scroll.teams.member.online_status=Status
+scroll.teams.disband.title=Disband Team
+scroll.teams.disband.description=Are you absolutely sure you want to disband your team? This action cannot be undone, and all team data, including members, settings, and invites, will be lost!
+
+## Credits
+scroll.credits.title=Credits
+scroll.credits.description=The people who made this possible!
+scroll.credits.author=Author
+scroll.credits.contributors=Contributors
+scroll.credits.translators=Translators
+scroll.credits.special_thanks=Special Thanks
+scroll.credits.patrons=Patrons
+scroll.credits.beta=Beta Testers
+
+## Quick Settings
+scroll.settings.quick.title=Quick Settings
+scroll.settings.quick.enable_bending=Enable Bending Abilities
+scroll.settings.quick.status_messages=Show Move Status Messages
+scroll.settings.quick.show_hud=Show New HUD Elements
+scroll.settings.quick.double_sneak_time=Double Sneak Time
+scroll.settings.quick.show_sidebar=Show Slots Sidebar
+scroll.settings.quick.double_sneak_time_desc=The time in ticks between two sneaks required to activate a move, the default is 20 ticks, or 1 second.
+scroll.settings.quick.double_sneak_time_prefix=Change to
+scroll.settings.quick.cancel=You exited the settings menu without saving your changes!
+scroll.settings.quick.hud_changed=Updated HUD visibility to %s.
+scroll.settings.quick.bending_changed=Updated bending abilities to %s.
+scroll.settings.quick.status_messages_changed=Updated move status messages to %s.
+scroll.settings.quick.sidebar_changed=Updated sidebar visibility to %s.
+scroll.settings.quick.double_sneak_time_changed=Updated double sneak time to %s ticks.
+scroll.settings.quick.enabled=Enabled
+scroll.settings.quick.disabled=Disabled
+
+## Advanced Settings
+scroll.settings.advanced.title=Advanced Settings
+scroll.settings.advanced.show_damage_debug=Show Damage Debug
+scroll.settings.advanced.show_damage_debug_changed=Updated damage debug visibility to %s.
+scroll.settings.advanced.aim_assist_strength=Aim Assist Strength
+scroll.settings.advanced.aim_assist_strength_changed=Updated aim assist strength to %s.
+scroll.settings.advanced.aim_assist_strength_desc=The strength of the aim assist, the higher the value, the more the aim assist will help you. It works by retroactively changing the direction of your moves to the nearest entity, so in some cases it might actually make your moves less accurate for fast moving entities.
+
+## Admin Settings
+scroll.admin.title=Admin Settings
+scroll.admin.description=Edit how the addon works!
+scroll.admin.edit_player=Edit Player Settings
+scroll.admin.edit_world=Edit World Settings
+scroll.admin.debug=Debug
+scroll.admin.world_presets=World Presets
+scroll.admin.world_presets.title=World Presets
+scroll.admin.world_presets.description=Choose a preset to apply to the world!
+scroll.admin.world_presets.standard=Standard Features
+scroll.admin.world_presets.pvp=Combat Features
+scroll.admin.world_presets.server=Server Features
+scroll.admin.player.title=Player Settings
+scroll.admin.player.description=Edit a player's settings!
+scroll.admin.player.style=Change Style
+scroll.admin.player.level=Change Level
+scroll.admin.player.skill_tree=Edit Skill Tree
+scroll.admin.player.see_inventory=See Inventory
+scroll.admin.player.ender_chest_wipe=Clear Ender Chest
+scroll.admin.player.reset=Reset Player
+
+scroll.admin.world.title=World Settings
+scroll.admin.world.description=Edit the rules of the world!
+scroll.admin.world.basic=Basic Settings
+scroll.admin.world.ban_moves=Ban Moves
+scroll.admin.world.ban_elements=Ban Elements
+scroll.admin.world.world_border=World Border
+scroll.admin.world.no_bending_zones=Nonbending Zones
+
+scroll.admin.world.world_border.enabled=World Border Enabled
+scroll.admin.world.world_border.size=World Border Radius
+scroll.admin.world.world_border.size_desc=The radius of the world border, in blocks. If a player goes outside of this border, they'll be pushed back inside or be teleported back to world spawn.
+scroll.admin.world.world_border.size_prefix=Change to
+scroll.settings.worldborder_changed=Updated world border to %s.
+scroll.settings.worldborder_changed_size=Updated world border size to %s blocks.
+
+scroll.admin.world_presets.standard.title=Standard Features
+scroll.admin.world_presets.standard.description=These are the standard features of the addon, and are enabled by default. Clicking this won't reset any players affected by previous changes, but it will reset the world to the standard features for all players.
+scroll.admin.world_presets.use=Load Preset
+
+scroll.admin.world_presets.pvp.title=Combat Features
+scroll.admin.world_presets.pvp.description=This will fully unlock all players' skill trees (online now and who join), set everyone to level 100, and give everyone all moves. It sets a smaller world border, and disables homes!
+
+scroll.admin.world_presets.server.title=Server Features
+scroll.admin.world_presets.server.description=This will enable all elements except the Avatar, and set the world border to 100000 blocks. It will also enable homes and teams!
+
+scroll.admin.cancel=You exited the admin menu without saving your changes!
+
+scroll.admin.world_presets.standard.success=Successfully loaded the standard features preset!
+scroll.admin.world_presets.pvp.success=Successfully loaded the combat features preset!
+scroll.admin.world_presets.server.success=Successfully loaded the server features preset!
+
+scroll.admin.player.style_title=Change Bending Style
+scroll.admin.player.style_description=Select a new bending style for this player!
+
+scroll.admin.player.level.title=Change Level
+scroll.admin.player.level.level=Bending Level
+scroll.admin.player.level.level_desc=This level determines the moves they have access to. This will also affect their chi regeneration.
+scroll.admin.player.level.level_prefix=Change to
+scroll.settings.level_changed=Updated player level to %s.
+
+scroll.admin.player.see_inventory.title=See %s's Inventory
+scroll.admin.player.reset.success=Successfully reset skill tree, style, and all moves of %s!
+scroll.admin.player.ender_chest_wipe.success=Successfully cleared the ender chest of %s!
+
+scroll.admin.world.basic.title=Basic World Settings
+scroll.admin.world.basic.bending_enabled=Bending Enabled (Global)
+scroll.settings.bending_enabled=Updated global bending abilities to %s.
+scroll.admin.world.basic.set_home_enabled=Set Homes Enabled
+scroll.settings.set_home_enabled=Updated global set homes to %s.
+scroll.admin.world.basic.bending_choice_final=Bending Choice Final
+scroll.settings.bending_choice_final=Updated bending choice final to %s.
+scroll.admin.world.basic.bending_choice_random=Bending Choice Random
+scroll.settings.bending_choice_random=Updated bending choice random to %s.
+scroll.admin.world.basic.avatar_allowed=Avatar Publicly Selectable
+scroll.settings.avatar_allowed=Updated avatar public selection to %s.
+scroll.admin.world.basic.skilltree=Skill Tree Fully Unlockable
+scroll.settings.skilltree=Updated skill tree fully unlockable to %s.
+
+scroll.choose_element.random=Random elements are enabled for this server. You've been assigned the element %s!
+scroll.choose_element.final=Elements are final for this server! You can't change your element. Your current (and final) element is %s.
+scroll.choose_element.final.tag=(Final)
+scroll.choose_element.avatar_disabled=The Avatar is disabled for this server. You can't choose it.
+scroll.choose_element.randomize=Randomize
+
+scroll.choose_element.random_desc=This server has random elements enabled, which means you'll be assigned a random element when you click this button!
+scroll.choose_element.random_set=Random Element
+
+scroll.admin.world.basic.bending_speed=Bending Speed
+scroll.admin.world.basic.bending_speed_desc=The speed at chi regenerates, as a mutliplier per tick. The default is 1.0, which is the normal speed. 0.5 would be half speed, and 2.0 would be double speed. 
+scroll.admin.world.basic.bending_speed_prefix=Change to
+scroll.settings.bending_speed_changed=Updated bending speed to %s.
+
+scroll.admin.world.basic.bending_level_speed=Bending Level Speed
+scroll.admin.world.basic.bending_level_speed_desc=The speed at which the player levels up in bending, as a multiplier. The default is 1.0, which is the normal speed. 0.5 would be half speed, and 2.0 would be double speed.
+scroll.admin.world.basic.bending_level_speed_prefix=Change to
+scroll.settings.bending_level_speed_changed=Updated bending level speed to %s.
+
+scroll.statsmenu.homes.disabled=Homes are disabled for this server!
+
+scroll.no_bending_zones.create.title=Nonbending Zone
+scroll.no_bending_zones.create.description=Zone Name:
+scroll.no_bending_zones.create.placeholder=Spawn
+scroll.no_bending_zones.create.radius=Zone Radius
+scroll.no_bending_zones.create.radius_desc=The radius of the nonbending zone, in blocks. If a player goes inside this zone, their bending abilities will be disabled. Center is where you're standing.
+scroll.no_bending_zones.create.radius_prefix=Change to
+scroll.no_bending_zones.create.exit=You exited the nonbending zone menu without creating a zone!
+scroll.no_bending_zones.create.tooshort=The zone name is too short! Keep it %s character or more.
+scroll.no_bending_zones.create.toolong=The zone name is too long! Keep it at %s characters or less.
+scroll.no_bending_zones.create.toomany=You have too many nonbending zones! You can only have %s.
+scroll.no_bending_zones.create.success=Successfully created the nonbending zone %s!
+
+scroll.no_bending_zones.edit.radius_desc=The radius of the nonbending zone, in blocks. If a player goes inside this zone, their bending abilities will be disabled. Center is where the zone was created.
+scroll.no_bending_zones.edit.exit=You exited the nonbending zone menu without saving changes!
+scroll.no_bending_zones.edit.success=Successfully updated the nonbending zone %s!
+scroll.no_bending_zones.select.description=Select a nonbending zone to edit!
+
+scroll.no_bending_zones.delete.description=Select a nonbending zone to delete!
+scroll.no_bending_zones.delete.success=Successfully deleted the nonbending zone %s!
+
+scroll.admin.world.no_bending_zones.description=Select an option to manage nonbending zones!
+scroll.admin.world.no_bending_zones.create=Create
+scroll.admin.world.no_bending_zones.edit=Edit
+scroll.admin.world.no_bending_zones.delete=Delete
+
+scroll.admin.world.ban_moves_description=Select a move to ban or unban!
+scroll.admin.world.ban_moves.banned=Banned the move %s!
+scroll.admin.world.ban_moves.unbanned=Unbanned the move %s!
+
+scroll.admin.no_permission=You don't have permission to use open this menu! If you are op, try running the '/function op' command.
+
+## Updates
+scroll.updates.title=View Update Notes
+scroll.updates.version=Avatar Addon Version %s
+scroll.updates.description=Here's what's new in this version!
+
+scroll.updates.version.short=Version
+scroll.updates.date=Date
+scroll.updates.notes=Notes
+scroll.updates.changes=Changes
+scroll.updates.unreleased=Unreleased
+
+scroll.updates.notes.1=This is the initial release of Avatar Addon (at least the "revamped" version). It's a complete rewrite of the original addon, with a new HUD, new moves, new elements, and more! It's a lot more polished and has a lot more features than the original, so I hope you enjoy it! This version is the first version that supports changelogs, so you can see what's new in each version right here in the game!
+scroll.updates.changes.1=Initial release of Avatar Addon!
+
+scroll.updates.notes.2=This update is relatively small: it adds 4 new elements to each bending style, and fixes a couple of small bugs. 
+scroll.updates.changes.2.1=Added 4 new moves to each element!
+scroll.updates.changes.2.2=a
+scroll.updates.changes.2.3=a
+scroll.updates.changes.2.4=Fixed assorted bugs and issues!
+
+
+
+
+## Air Status Messages
+elements.air.message.artillery_fail=No entities found in the area.
+elements.air.message.airspirit_fail_to_far=You're too far away from your spirit marker!
+elements.air.message.airspirit_fail_interfere=Somebody hit your spirit marker!
+elements.air.message.airspirit_fail_logout=Please don't log out while using this move!
+elements.air.message.airspirit_start=You've set your spirit marker! Fly into it to return to your normal form.
+
+## Earth Status Messages
+elements.earth.message.activate_sneak=Sneak to raise the earth above the highlighted blocks!
+elements.earth.message.activate_punch=Punch to throw the block!
+elements.earth.message.no_blocks=You're too far away from any earth, no bendable blocks could be found.
+elements.earth.message.earthtop_failed=You can't travel to the surface here, you're already on the surface!
+elements.earth.message.earthtop_nether=Maybe this isn't the best place to try this move...
+
+## Fire Status Messages
+elements.fire.message.no_blocks=You're too far away from any blocks to light on fire.
+
+## Water Status Messages
+elements.water.message.no_water=You don't have enough water for this move! Drink some (just sip) or find a source block!
+elements.water.message.activate_sneak=Sneak to raise the ice above the highlighted blocks!
+elements.water.message.activate_punch=Punch to throw the ice!
+elements.water.message.no_blocks=You're too far away from any bendable blocks!
+elements.water.message.drain=You've drained the moisture from this block.
+elements.water.message.bloodbending=Wait for the full moon to use this move!
+
+## Nonbender Status Messages
+elements.nonbender.message.boomerang_success=You reflected all the damage back!
+
+## Air moves
+elements.air.moves.airblast.name=Air Blast
+elements.air.moves.airblast.description=Blasts a focused shot of air that does damage and knockback.
+elements.air.moves.airlaunch.name=Air Launch
+elements.air.moves.airlaunch.description=Launch yourself into the air with a gust of wind - about 12 blocks!
+elements.air.moves.airrush.name=Air Rush
+elements.air.moves.airrush.description=As long as you have chi, you can rush in any direction on a burst of air.
+elements.air.moves.airball.name=Air Ball
+elements.air.moves.airball.description=Blasts a slow-moving ball of air that does high damage and explodes on impact.
+elements.air.moves.airleap.name=Air Leap
+elements.air.moves.airleap.description=Leap forward with a burst of air, about 5 blocks forward. Using with an elytra will give you a boost.
+elements.air.moves.airshockwave.name=Air Shockwave
+elements.air.moves.airshockwave.description=Charge up a shockwave of air that does damage and knockback in a large area, and shoots out 4 trailing blasts.
+elements.air.moves.airslam.name=Air Slam
+elements.air.moves.airslam.description=Slam to ground and create a shockwave burst of air, doing damage and knockback in a 7 block area.
+elements.air.moves.airscooter.name=Air Scooter
+elements.air.moves.airscooter.description=Create a ball of air that you can ride around on. It's a bit slow, but it's fun!
+elements.air.moves.wallshot.name=Wall Shot
+elements.air.moves.wallshot.description=Shoot a focused shot of air that bounces off walls! Each bounce increases the damage.
+elements.air.moves.airsniper.name=Air Sniper
+elements.air.moves.airsniper.description=Shoot a focused shot of air that does high damage and knockback, but the damage starts at 0 and increases the farther the shot travels.
+elements.air.moves.puff.name=Puff
+elements.air.moves.puff.description=Generate a continuous puff of air that pushes entities away from you. Great for crowd control! If you're sneaking, it will pull entities towards you instead.
+elements.air.moves.vortex.name=Vortex
+elements.air.moves.vortex.description=Create a vortex of air that pulls entities towards the center, and lets you hover in the air.
+elements.air.moves.tornado.name=Tornado
+elements.air.moves.tornado.description=Create a tornado of air that does damage and knockback in a 2 block area.
+elements.air.moves.scorpionstrike.name=Scorpion Strike
+elements.air.moves.scorpionstrike.description=Shoot a curving air blast into the sky that comes back down on homing in on your enemies!
+elements.air.moves.artillery.name=Artillery
+elements.air.moves.artillery.description=Shoot a blast of air with slight curve and homing that does damage and knockback in a 3 block area.
+elements.air.moves.airpull.name=Air Pull
+elements.air.moves.airpull.description=Pull entities towards you with a gust of air, with a range of around 32 blocks.
+elements.air.moves.airpush.name=Air Push
+elements.air.moves.airpush.description=Push entities away from you with a gust of air, with a range of around 32 blocks.
+elements.air.moves.airspirit.name=Air Spirit
+elements.air.moves.airspirit.description=Enter your spirit form (spectator mode) and fly around as a spirit. You can't interact with the world, but you can see everything! If you fly more than 32 blocks away from your body, you'll be teleported back to it. If you re-enter your body, you'll be brought back into your normal form. If somebody hits your body (your 'spirit marker') while you're in spirit form, you'll be brought back into your normal form.
+
+## Earth moves
+elements.earth.moves.earthhurl.name=Earth Hurl
+elements.earth.moves.earthhurl.description=Hurl a rock at your enemies, doing damage and knockback.
+elements.earth.moves.earthshockwave.name=Earth Shockwave
+elements.earth.moves.earthshockwave.description=Slam the ground and create a shockwave of earth that does high damage in a 9 block area.
+elements.earth.moves.earthwall.name=Earth Wall
+elements.earth.moves.earthwall.description=Create a wall of earth in front of you that blocks projectiles and entities.
+elements.earth.moves.earthshield.name=Earth Shield
+elements.earth.moves.earthshield.description=Create a shield of earth around you that blocks projectiles and entities.
+elements.earth.moves.earthtop.name=Earth Top
+elements.earth.moves.earthtop.description=Escape caves and other tight spaces by burrowing to the surface! Takes you to the highest block above you.
+elements.earth.moves.earthbigspike.name=Earth Big Spike
+elements.earth.moves.earthbigspike.description=Create a large spike of earth that does damage and launches entities high into the air, or you if you're standing on it.
+elements.earth.moves.earthpillar.name=Earth Pillar
+elements.earth.moves.earthpillar.description=Create a pillar of earth that does damage and knockback, or lifts you up if you're standing on it.
+elements.earth.moves.earthsearch.name=Earth Search
+elements.earth.moves.earthsearch.description=Search the blocks under you (depth of 256) for any kind of ore, even not naturally occurring ones (diamond blocks, for example).
+elements.earth.moves.earthrend.name=Earth Rend
+elements.earth.moves.earthrend.description=Create a fissure in the earth in front of your feet to trap opponents underground.
+elements.earth.moves.earthspikes.name=Earth Spikes
+elements.earth.moves.earthspikes.description=Spread a wave of spikes directly in front of you, doing damage and stunning opponents.
+elements.earth.moves.earthspikeline.name=Earth Spike Line
+elements.earth.moves.earthspikeline.description=Shoot a line of spikes far out in front of you, doing damage and stunning opponents.
+elements.earth.moves.eartheadbutt.name=Earth Headbutt
+elements.earth.moves.eartheadbutt.description=Dash and smash through walls and enemies alike (headfirst)! Good for quick mining missons.
+elements.earth.moves.butterbarrage.name=Butter Barrage
+elements.earth.moves.butterbarrage.description=Summon 4 small blocks of earth that you can shoot at your enemies by punching, doing damage and knockback.
+elements.earth.moves.metalhook.name=Metal Hook
+elements.earth.moves.metalhook.description=Grapple onto blocks, entities, and players with a metal hook that you can shoot out of your hand. This move has a ton of combos and uses, so experiment with it! If you're in the air and hook an entity, it's pulled toward you and stalled in the air for a combo (punch it). If you hook down while in the air, you'll shoot to the ground and create a shockwave, which launches mobs into the air. If you then look up and grapple them, you'll pull yourself up towards them and stall in the air for another combo!
+elements.earth.moves.seismicsense.name=Seismic Sense
+elements.earth.moves.seismicsense.description=See the world around you in a new way, by sensing the vibrations in the earth. This move draws colored lines to the closest 5 entities (in a 48 block radius) around you! The color of the line indicates the entity's type. Red is hostile, green is neutral, blue is items, players are orange, and the rest is yellow!
+elements.earth.moves.magmasurge.name=Magma Surge
+elements.earth.moves.magmasurge.description=Create a shockwave of magma that rapidly expands outwards up to 9 blocks, dealing damage and knockback to entities in its path. It lasts for 3 seconds, and while charging it entities are pulled towards the center of the shockwave.
+elements.earth.moves.earthquake.name=Earthquake
+elements.earth.moves.earthquake.description=Create an actual earthquake that does (minor) damage and knockback in a 20 block area, but serves to slow down (with Slowness II) and disorient your enemies. It lasts for as long as you have chi.
+
+## Fire moves
+elements.fire.moves.flameshot.name=Flame Shot
+elements.fire.moves.flameshot.description=Shoot a blast of fire at your enemies, doing damage and setting them on fire.
+elements.fire.moves.flamewave.name=Flame Wave
+elements.fire.moves.flamewave.description=Create a wave of fire that does damage and sets enemies on fire in a 8 block area.
+elements.fire.moves.flashfire.name=Flash Fire
+elements.fire.moves.flashfire.description=Dash forward and leave a trail of fire in your wake, damaging and knocking back enemies!
+elements.fire.moves.fireleap.name=Fire Leap
+elements.fire.moves.fireleap.description=Leap forward with a burst of fire, about 5 blocks forward. Using with an elytra will give you a boost.
+elements.fire.moves.fireboosters.name=Fire Boosters
+elements.fire.moves.fireboosters.description=Lets you fly by shooting out fire! If you ram into entities, it does damage.
+elements.fire.moves.firecharge.name=Fire Charge
+elements.fire.moves.firecharge.description=Ignite your spirit mid-fight to gain a burst of extra health!
+elements.fire.moves.firespread.name=Fire Spread
+elements.fire.moves.firespread.description=Spread a wave of fire directly in front of you, doing damage and setting enemies on fire.
+elements.fire.moves.firejump.name=Fire Jump
+elements.fire.moves.firejump.description=Jump high into the air with a burst of fire, about 6 blocks!
+elements.fire.moves.fireball.name=Fireball
+elements.fire.moves.fireball.description=Shoot a fireball like ghasts do, doing damage and setting enemies on fire.
+elements.fire.moves.bounceblast.name=Bounce Blast
+elements.fire.moves.bounceblast.description=Shoot a blast of fire that bounces off walls! Each bounce increases the damage.
+elements.fire.moves.scorpionsting.name=Scorpion Sting
+elements.fire.moves.scorpionsting.description=Shoot a curving fire shot into the sky that comes back down on homing in on your enemies in a arc pattern!
+elements.fire.moves.dragonstrike.name=Dragon Strike
+elements.fire.moves.dragonstrike.description=Summon a 3 trails of fire that converge on your target, doing damage and setting them on fire.
+elements.fire.moves.dragonofthewest.name=Dragon of West
+elements.fire.moves.dragonofthewest.description=...
+elements.fire.moves.lightningsweep.name=Lightning Sweep
+elements.fire.moves.lightningsweep.description=Shoot an arc of lightning directly forward, which will stun the first 3 entities it touches for 3 seconds.
+elements.fire.moves.lightningburst.name=Lightning Burst
+elements.fire.moves.lightningburst.description=Shoot a burst of lightning that launches you backwards into the air, and does shotgun style damage to entities in front of you.
+elements.fire.moves.electroshock.name=Electroshock
+elements.fire.moves.electroshock.description=Create a shockwave of electricity that does damage and knockback in a 8 block area.
+elements.fire.moves.thunderclap.name=Thunderclap
+elements.fire.moves.thunderclap.description=A powerful move meant for only the firebender royal family. Channel all your power into one super powerful bolt of lightning! It does a ton of damage and knockback, but takes a while to charge up. It's range is roughly 32 blocks.
+elements.fire.moves.deathslam.name=Death Slam
+elements.fire.moves.deathslam.description=Slam to ground and create a shockwave burst of fire, doing damage and knockback in a 4 block area.
+elements.fire.moves.combustionbeam.name=Combustion Beam
+elements.fire.moves.combustionbeam.description=Charge up a beam of long range explosive energy that explodes on impact and shoots instantly.
+elements.fire.moves.flameaura.name=Flame Aura
+elements.fire.moves.flameaura.description=Create a continuous aura of fire around you that does damage to entities that get too close, and spams fireballs!
+
+## Water moves
+elements.water.moves.torrent.name=Torrent
+elements.water.moves.torrent.description=Shoot a torrent of water at your enemies.
+elements.water.moves.icebigspike.name=Ice Big Spike
+elements.water.moves.icebigspike.description=Create a spike of ice that does damage and launches entities high into the air, or you if you're standing on it.
+elements.water.moves.tidalslice.name=Tidal Slice
+elements.water.moves.tidalslice.description=Slice through your enemies with a wave of water that does damage and a large pushback.
+elements.water.moves.geyser.name=Geyser
+elements.water.moves.geyser.description=Launch yourself into the air with a geyser of water, about 10 blocks!
+elements.water.moves.gush.name=Gush
+elements.water.moves.gush.description=Create a gush of water locks onto the nearest entity and follows them, doing damage and knockback.
+elements.water.moves.jetstream.name=Jetstream
+elements.water.moves.jetstream.description=Create a stream of water that pushes entities away from you, or if aimed at the ground, pushes you away from the stream.
+elements.water.moves.frostwalker.name=Frost Walker
+elements.water.moves.frostwalker.description=Basically the frost walker enchantment, but in a move! Walk on water and freeze it as you go.
+elements.water.moves.icethrow.name=Ice Throw
+elements.water.moves.icethrow.description=Form a block of ice that you can shoot at your enemies by punching it, doing damage and knockback.
+elements.water.moves.icespikes.name=Ice Spikes
+elements.water.moves.icespikes.description=Create a wave of spikes directly in front of you, doing damage and stunning opponents.
+elements.water.moves.icespikeline.name=Ice Spike Line
+elements.water.moves.icespikeline.description=Shoot a line of spikes far out in front of you, doing damage and stunning opponents.
+elements.water.moves.splash.name=Splash
+elements.water.moves.splash.description=Form a charged splash of water that does damage and knockback in a 6 block area.
+elements.water.moves.vinegrapple.name=Vine Grapple
+elements.water.moves.vinegrapple.description=Grapple onto blocks, entities, and players with a vine that you can shoot out of your hand. This move has a ton of combos and uses, so experiment with it! If you're in the air and grapple an entity, it's pulled towards you and stalled in the air for a combo (punch it). If you hook down while in the air, you'll shoot to the ground and create a shockwave, which launches
+elements.water.moves.vinehook.name=Vine Hook
+elements.water.moves.vinehook.description=Grab onto all nearby entities in a 32 block radius with a poisonous vine, doing damage and pulling them towards you.
+elements.water.moves.focusheal.name=Focus Heal
+elements.water.moves.focusheal.description=Heal yourself for a small amount of health, and clear some negative status effects.
+elements.water.moves.healingcloud.name=Healing Cloud
+elements.water.moves.healingcloud.description=Create a cloud of healing that heals you and your allies in a 16 block radius.
+elements.water.moves.bloodbending.name=Bloodbending
+elements.water.moves.bloodbending.description=Control entities when the moon is full. You can move them around.
+elements.water.moves.hydroshock.name=Hydroshock
+elements.water.moves.hydroshock.description=Converts all your remaining water into a shockwave that does huge damage and knockback in a 12 block area.
+elements.water.moves.frostbreath.name=Frost Breath
+elements.water.moves.frostbreath.description=Freeze nearby opponents in place for 3 seconds with a blast of frosty air.
+
+## Nonbender moves
+elements.nonbender.moves.boomerang.name=Boomerang
+elements.nonbender.moves.boomerang.description=While the move is active, all damage you receive *from bending* is reflected back to the entity that dealt it. The move lasts for 5 seconds, and has a cooldown of 15 seconds.
+elements.nonbender.moves.dash.name=Dash
+elements.nonbender.moves.dash.description=Quickly dash forward 5 blocks.
+elements.nonbender.moves.rewind.name=Rewind
+elements.nonbender.moves.rewind.description=Rewind your position to where you were when you activated the move after 3 seconds, recovering all damage received in the meantime.
+elements.nonbender.moves.truesight.name=Truesight
+elements.nonbender.moves.truesight.description=See invisible entities and players while the move is active.
+
+## Skill Tree
+skilltree.title=Skill Tree
+skilltree.cost=Cost: %s XP
+skilltree.perm_locked=Locked
+skilltree.cost.unlocked=Unlocked
+skilltree.cost.free=Free
+skilltree.parent_not_unlocked=You need to unlock the previous skill first!
+skilltree.already_unlocked=You've already unlocked this skill!
+skilltree.perm_locked_message=You've already taken a different path!
+skilltree.info.title=Skill Tree Info
+skilltree.info.what=Pick your Path:
+skilltree.info.what.desc=The skill tree is a way to unlock new abilities and improve your bending skills. Each 'skill' is a unique ability that you can unlock by spending XP. Click on a skill to see a description of it, and click the confirm button it to unlock it.
+skilltree.info.how=Commit to Mastery:
+skilltree.info.how.desc=Be cautious! Once you choose a path from any skill, the alternate paths from that skill lock! You can reset your skill tree by clicking reforge!
+skilltree.reforge.title=Reforge Skill Tree
+skilltree.reforge.confirm=Are you sure?
+skilltree.reforge.confirm.desc=Are you sure you want to reset your skill tree? While this will refund all of your XP, you will lose all your unlocked skills!
+skilltree.reforge.success=Successfully reforged your skill tree!
+skilltree.unlock.title=Unlock Skill
+skilltree.unlock.confirm=Are you sure?
+skilltree.unlock.confirm.desc=Are you sure you want to unlock this skill? This will cost %s experience points.
+skilltree.unlock.not_enough=You can't afford that!
+skilltree_options.load.cost=You can't afford to load that skill tree, you'll need %s XP levels more!
+skill_tree.options.title=Build Options
+skilltree.builds.create.title=Create Build
+skilltree.builds.create.description=Build Name:
+skilltree.builds.create.placeholder=Offensive Tree
+skilltree.builds.create.tooshort=The build name is too short! Keep it %s character or more.
+skilltree.builds.create.toolong=The build name is too long! Keep it at %s characters or less.
+skilltree.builds.create.exists=You already have a build with that name!
+skilltree.builds.create.toomany=You have too many builds! You can only have %s.
+skilltree.builds.create.success=Successfully created the build %s!
+skilltree.builds.load.none=You don't have any builds to load!
+skilltree.builds.load.title=Load Build
+skilltree.builds.load.description=Select a build to load!
+skilltree.builds.load.exit=You exited the build menu without loading a build!
+skilltree.builds.load.success=Successfully loaded the build %s!
+skilltree.builds.delete.title=Delete Build
+skilltree.builds.delete.none=You don't have any builds to delete!
+scroll.choose_slots.movesets.delete.description=Select a build to delete!
+skilltree.builds.delete.exit=You exited the build menu without deleting a build!
+skilltree.builds.delete.success=Successfully deleted the build %s!
+
+## Skill Tree Passover Skills
+skilltree.core=Core
+skilltree.core.desc.1=Your sea of chi, the
+skilltree.core.desc.2=source of your power.
+
+skilltree.warriors_spirit=Warrior's Spirit
+skilltree.warriors_spirit.desc.1=Gain a permanent
+skilltree.warriors_spirit.desc.2=level of strength.
+
+skilltree.warriors_spirit_plus=Warrior's Spirit+
+skilltree.warriors_spirit_plus.desc.1=Increases your bending
+skilltree.warriors_spirit_plus.desc.2=damage by 15%.
+
+skilltree.chi_infusion=Chi Infusion
+skilltree.chi_infusion.desc.1=Gain a a permanent
+skilltree.chi_infusion.desc.2=level of regeneration.
+
+skilltree.chi_infusion_plus=Chi Infusion+
+skilltree.chi_infusion_plus.desc.1=When below 40% health, chi
+skilltree.chi_infusion_plus.desc.2=regeneration is 100% faster.
+
+skilltree.bending_resistance=Bending Resistance
+skilltree.bending_resistance.desc.1=Damage taken from bending
+skilltree.bending_resistance.desc.2=is reduced by 30%.
+
+skilltree.bending_resistance_plus=Bending Resistance+
+skilltree.bending_resistance_plus.desc.1=Damage taken from bending
+skilltree.bending_resistance_plus.desc.2=that does less than 2 hearts
+skilltree.bending_resistance_plus.desc.3=is completely negated.
+
+## Air Skill Tree
+skilltree.twinkle_toes=Twinkle Toes
+skilltree.twinkle_toes.desc.1=All contact damage like magma
+skilltree.twinkle_toes.desc.2=is completely negated, and
+skilltree.twinkle_toes.desc.3=sculk sensors won't detect you.
+
+skilltree.double_jump=Double Jump
+skilltree.double_jump.desc.1=When you jump in the air,
+skilltree.double_jump.desc.2=you can jump again to
+skilltree.double_jump.desc.3=double jump.
+
+skilltree.wind_dash=Wind Dash
+skilltree.wind_dash.desc.1=After a double jump, you
+skilltree.wind_dash.desc.2=can sneak to dash forward
+skilltree.wind_dash.desc.3=4 blocks quickly.
+
+skilltree.scorpion_strike=Scorpion Strike
+skilltree.scorpion_strike.desc.1=Unlocks the Scorpion Strike
+skilltree.scorpion_strike.desc.2=move, which shoots a
+skilltree.scorpion_strike.desc.3=curving air blast.
+
+skilltree.peaceful_presence=Peaceful Presence
+skilltree.peaceful_presence.desc.1=Hostile mobs will not
+skilltree.peaceful_presence.desc.2=attack you unless you
+skilltree.peaceful_presence.desc.3=attack them first.
+
+skilltree.air_cushion=Air Cushion
+skilltree.air_cushion.desc.1=All fall damage is
+skilltree.air_cushion.desc.2=completely negated.
+
+skilltree.air_puff=Air Puff
+skilltree.air_puff.desc.1=Unlocks the Air Puff
+skilltree.air_puff.desc.2=move, which creates a
+skilltree.air_puff.desc.3=continuous puff of air.
+
+skilltree.wall_shot=Wall Shot
+skilltree.wall_shot.desc.1=Unlocks the Wall Shot
+skilltree.wall_shot.desc.2=move, which shoots a
+skilltree.wall_shot.desc.3=focused shot of air
+skilltree.wall_shot.desc.4=that bounces off walls.
+
+skilltree.whirlwind_redirection=Whirlwind Redirection
+skilltree.whirlwind_redirection.desc.1=Passively redirects
+skilltree.whirlwind_redirection.desc.2=arrows near you to
+skilltree.whirlwind_redirection.desc.3=entities you look at.
+skilltree.whirlwind_redirection.desc.4=Pull a bow to see the 
+skilltree.whirlwind_redirection.desc.5=aim indicator particles.
+
+skilltree.onion_and_banana_juice=Onion and Banana Juice
+skilltree.onion_and_banana_juice.desc.1=On a higher plane,
+skilltree.onion_and_banana_juice.desc.2=troubles such as hunger
+skilltree.onion_and_banana_juice.desc.3=no longer bother you.
+
+skilltree.airflow=Airflow
+skilltree.airflow.desc.1=Gain permanent levels of
+skilltree.airflow.desc.2=speed and jump boost.
+
+skilltree.air_spirit=Air Spirit
+skilltree.air_spirit.desc.1=Unlocks the Air Spirit
+skilltree.air_spirit.desc.2=move, which lets you
+skilltree.air_spirit.desc.3=enter your spirit form
+skilltree.air_spirit.desc.4=(spectator mode).
+
+## Earth Skill Tree
+skilltree.natural_affinity=Natural Affinity
+skilltree.natural_affinity.desc.1=All contact damage like magma
+skilltree.natural_affinity.desc.2=blocks and berry bushes
+skilltree.natural_affinity.desc.3=is completely negated.
+
+skilltree.earth_rend=Earth Rend
+skilltree.earth_rend.desc.1=Unlocks the Earth Rend
+skilltree.earth_rend.desc.2=move, which creates a
+skilltree.earth_rend.desc.3=fissure in the earth.
+
+skilltree.fortunate_fists=Fortunate Fists
+skilltree.fortunate_fists.desc.1=Your bare fists now
+skilltree.fortunate_fists.desc.2=have fortune III.
+
+skilltree.metal_hook=Metal Hook
+skilltree.metal_hook.desc.1=Unlocks the Metal Hook
+skilltree.metal_hook.desc.2=move, which lets you
+skilltree.metal_hook.desc.3=grapple onto things!
+skilltree.metal_hook.desc.4=(6+ Combos)
+
+skilltree.seismic_sense=Seismic Sense
+skilltree.seismic_sense.desc.1=Unlocks the Seismic Sense
+skilltree.seismic_sense.desc.2=move, which draws 'lines' to
+skilltree.seismic_sense.desc.3=the closest 5 entities.
+
+skilltree.butter_barrage=Butter Barrage
+skilltree.butter_barrage.desc.1=Unlocks the Butter Barrage
+skilltree.butter_barrage.desc.2=move, which summons 4
+skilltree.butter_barrage.desc.3=small blocks of earth that
+skilltree.butter_barrage.desc.4=you can shoot.
+
+skilltree.vein_miner=Vein Miner
+skilltree.vein_miner.desc.1=When mining ores, you'll
+skilltree.vein_miner.desc.2=automatically mine the
+skilltree.vein_miner.desc.3=entire vein (with fortune).
+
+skilltree.magma_surge=Magma Surge
+skilltree.magma_surge.desc.1=Unlocks the Magma Surge
+skilltree.magma_surge.desc.2=move, which creates a
+skilltree.magma_surge.desc.3=shockwave of magma.
+
+skilltree.earth_headbutt=Earth Headbutt
+skilltree.earth_headbutt.desc.1=Unlocks the Earth Headbutt
+skilltree.earth_headbutt.desc.2=move, which lets you dash
+skilltree.earth_headbutt.desc.3=through walls and enemies.
+
+skilltree.earth_spike_line=Earth Spike Line
+skilltree.earth_spike_line.desc.1=Unlocks the Earth Spike Line
+skilltree.earth_spike_line.desc.2=move, which shoots a line
+skilltree.earth_spike_line.desc.3=of spikes in front of you.
+
+skilltree.earthquake=Earthquake
+skilltree.earthquake.desc.1=Unlocks the Earthquake
+skilltree.earthquake.desc.2=move, which creates a
+skilltree.earthquake.desc.3=aftershock of earth.
+
+skilltree.neutral_jing=Neutral Jing
+skilltree.neutral_jing.desc.1=For each successfully 
+skilltree.neutral_jing.desc.2=performed perfect block,
+skilltree.neutral_jing.desc.3=you instantly refill
+skilltree.neutral_jing.desc.4=some of your chi.
+
+## Fire Skill Tree
+skilltree.hot_handed=Hot Handed
+skilltree.hot_handed.desc.1=If you right click any
+skilltree.hot_handed.desc.2=smeltable item, it will
+skilltree.hot_handed.desc.3=be smelted instantly.
+
+skilltree.fast_footed=Fast Footed
+## Description reused from Airflow
+## Gain permanent levels of speed and jump boost.
+
+skilltree.death_slam=Death Slam
+skilltree.death_slam.desc.1=Unlocks the Death Slam
+skilltree.death_slam.desc.2=move, which slams you
+skilltree.death_slam.desc.3=to the ground and creates
+skilltree.death_slam.desc.4=a shockwave of fire.
+
+skilltree.dragon_of_the_west=Dragon of the West
+skilltree.dragon_of_the_west.desc.1=Unlocks the Dragon
+skilltree.dragon_of_the_west.desc.2=of the West move,
+skilltree.dragon_of_the_west.desc.3=Iroh's signature move.
+
+skilltree.flame_aura=Flame Aura
+skilltree.flame_aura.desc.1=Unlocks the Flame Aura
+skilltree.flame_aura.desc.2=move, which allows you
+skilltree.flame_aura.desc.3=to spam mini fireballs.
+
+skilltree.firey_disposition=Firey Disposition
+skilltree.firey_disposition.desc.1=Gain a permanent
+skilltree.firey_disposition.desc.2=level of fire resistance.
+
+skilltree.hot_blooded=Hot Blooded
+skilltree.hot_blooded.desc.1=Burn away all negative
+skilltree.hot_blooded.desc.2=status effects.
+
+skilltree.lightning_sweep=Lightning Sweep
+skilltree.lightning_sweep.desc.1=Unlocks the Lightning Sweep
+skilltree.lightning_sweep.desc.2=move, which sweeps a wide
+skilltree.lightning_sweep.desc.3=area with lightning, stunning
+skilltree.lightning_sweep.desc.4=and damaging entities.
+
+skilltree.thunderclap=Thunderclap
+skilltree.thunderclap.desc.1=Unlocks the Thunderclap
+skilltree.thunderclap.desc.2=move, which creates a
+skilltree.thunderclap.desc.3=strong lightning bolt
+skilltree.thunderclap.desc.4=fit for royalty.
+
+skilltree.electroshock=Electroshock
+skilltree.electroshock.desc.1=Unlocks the Electroshock
+skilltree.electroshock.desc.2=move, which creates a
+skilltree.electroshock.desc.3=shockwave of electricity.
+
+skilltree.lightning_burst=Lightning Burst
+skilltree.lightning_burst.desc.1=Unlocks the Lightning Burst
+skilltree.lightning_burst.desc.2=move, which creates a
+skilltree.lightning_burst.desc.3=shotgun burst of lightning.
+
+skilltree.combustion_beam=Combustion Beam
+skilltree.combustion_beam.desc.1=Unlocks the Combustion Beam
+skilltree.combustion_beam.desc.2=move. Charge up a beam like
+skilltree.combustion_beam.desc.3=Sparky Sparky Boom Man!
+
+## Water Skill Tree
+skilltree.icy_aura=Icy Aura
+skilltree.icy_aura.desc.1=All contact damage like magma
+skilltree.icy_aura.desc.2=blocks and berry bushes
+skilltree.icy_aura.desc.3=is completely negated.
+
+skilltree.water_jet_rush=Water Jet Rush
+skilltree.water_jet_rush.desc.1=After sprinting for a 
+skilltree.water_jet_rush.desc.2=short time, you'll gain
+skilltree.water_jet_rush.desc.3=a speed boost depending
+skilltree.water_jet_rush.desc.4=on how long you sprinted.
+
+skilltree.vine_grapple=Vine Grapple
+skilltree.vine_grapple.desc.1=Unlocks the Vine Grapple
+skilltree.vine_grapple.desc.2=move, which lets you
+skilltree.vine_grapple.desc.3=grapple onto things!
+
+skilltree.vine_hook=Vine Hook
+skilltree.vine_hook.desc.1=Unlocks the Vine Hook
+skilltree.vine_hook.desc.2=move, which lets you
+skilltree.vine_hook.desc.3=pull and poison entities.
+
+skilltree.focused_healing=Focused Healing
+skilltree.focused_healing.desc.1=Unlocks the Focused Healing
+skilltree.focused_healing.desc.2=move, which heals you.
+
+skilltree.healing_cloud=Healing Cloud
+skilltree.healing_cloud.desc.1=Unlocks the Healing Cloud
+skilltree.healing_cloud.desc.2=move, which creates a
+skilltree.healing_cloud.desc.3=cloud of healing for
+skilltree.healing_cloud.desc.4=you and your allies.
+
+skilltree.frost_breath=Frost Breath
+skilltree.frost_breath.desc.1=Unlocks the Frost Breath
+skilltree.frost_breath.desc.2=move, which freezes nearby
+skilltree.frost_breath.desc.3=opponents in place.
+
+skilltree.moisture_drain=Moisture Drain
+skilltree.moisture_drain.desc.1=Punching certain blocks
+skilltree.moisture_drain.desc.2=will instantly refill your
+skilltree.moisture_drain.desc.3=entire chibar, but will also
+skilltree.moisture_drain.desc.4=destroy the block.
+
+skilltree.bloodbending=Bloodbending
+skilltree.bloodbending.desc.1=Unlocks the Bloodbending
+skilltree.bloodbending.desc.2=move, which lets you
+skilltree.bloodbending.desc.3=control entities when
+skilltree.bloodbending.desc.4=the moon is full.
+
+skilltree.hydroshock=Hydroshock
+skilltree.hydroshock.desc.1=Unlocks the Hydroshock
+skilltree.hydroshock.desc.2=move, which creates a
+skilltree.hydroshock.desc.3=shockwave of water, with
+skilltree.hydroshock.desc.4=damage scaling based
+skilltree.hydroshock.desc.5=on your remaining water.
+
+skilltree.fire_extinguisher=Fire Extinguisher
+skilltree.fire_extinguisher.desc.1=When you take fire damage,
+skilltree.fire_extinguisher.desc.2=you'll be extinguished, 
+skilltree.fire_extinguisher.desc.3=and the fire will be put out.
+
+skilltree.waterwash=Waterwash
+skilltree.waterwash.desc.1=After avoiding damage for
+skilltree.waterwash.desc.2=5 seconds, you get 75%
+skilltree.waterwash.desc.3=reduced damage for the next
+skilltree.waterwash.desc.4=hit you take, consuming
+skilltree.waterwash.desc.5=all of your remaining water.
+
+## Nonbender Skill Tree
+skilltree.light_footed=Light Footed
+skilltree.medicine=Medicine
+skilltree.medicine.desc.1=Treat and remove most
+skilltree.medicine.desc.2=negative status effects.
+
+skilltree.adrenaline=Adrenaline
+skilltree.adrenaline.desc.1=When below 40% health,
+skilltree.adrenaline.desc.2=you gain strength II.
+
+skilltree.perseverance=Perseverance
+skilltree.perseverance.desc.1=When below 40% health,
+skilltree.perseverance.desc.2=you gain resistance II.
+
+skilltree.chi_blocking=Chi Blocking
+skilltree.chi_blocking.desc.1=Landing a consecutive
+skilltree.chi_blocking.desc.2=12 hit combo will disable
+skilltree.chi_blocking.desc.3=your opponent's bending
+skilltree.chi_blocking.desc.4=abilities for 5 seconds.
+
+skilltree.boomerang=Boomerang
+skilltree.boomerang.desc.1=Unlocks the Boomerang
+skilltree.boomerang.desc.2=move, which lets you
+skilltree.boomerang.desc.3=reflect bending damage
+skilltree.boomerang.desc.4=back at opponents.
+
+skilltree.dash=Dash
+skilltree.dash.desc.1=Unlocks the Dash move,
+skilltree.dash.desc.2=which lets you dash
+skilltree.dash.desc.3=forward quickly.
+
+skilltree.truesight=Truesight
+skilltree.truesight.desc.1=Unlocks the Truesight
+skilltree.truesight.desc.2=move, which lets you
+skilltree.truesight.desc.3=see invisible entities.
+
+skilltree.sustenance=Sustenance
+skilltree.sustenance.desc.1=You will no longer
+skilltree.sustenance.desc.2=lose hunger points.
+
+skilltree.endurance=Endurance
+skilltree.endurance.desc.1=You will no longer
+skilltree.endurance.desc.2=take fall damage.
+
+skilltree.rewind=Rewind
+skilltree.rewind.desc.1=Unlocks the Rewind move,
+skilltree.rewind.desc.2=which lets you rewind
+skilltree.rewind.desc.3=your position.

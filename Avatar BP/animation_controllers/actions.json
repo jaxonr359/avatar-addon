@@ -1,0 +1,77 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.left": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"left": "variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"/scriptevent avatar:left_click_off"
+					]
+				},
+				"left": {
+					"transitions": [
+						{
+							"default": "!variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"/scriptevent avatar:left_click_on"
+					]
+				}
+			}
+		},
+		"controller.animation.sneak": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"sneak": "query.is_sneaking"
+						}
+					],
+					"on_entry": [
+						"/scriptevent avatar:sneak_off"
+					]
+				},
+				"sneak": {
+					"transitions": [
+						{
+							"default": "!query.is_sneaking"
+						}
+					],
+					"on_entry": [
+						"/scriptevent avatar:sneak_on"
+					]
+				}
+			}
+		},
+		"controller.animation.water": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"move": "query.is_in_contact_with_water"
+						}
+					],
+					"on_entry": [
+						"/scriptevent avatar:water_off"
+					]
+				},
+				"move": {
+					"transitions": [
+						{
+							"default": "!query.is_in_contact_with_water"
+						}
+					],
+					"on_entry": [
+						"/scriptevent avatar:water_on"
+					]
+				}
+			}
+		}
+	}
+}

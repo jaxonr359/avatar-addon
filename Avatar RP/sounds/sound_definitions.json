@@ -1,0 +1,211 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"avatar.air_blast": {
+			"category": "ui",
+			"sounds": [
+				"sounds/air_blast"
+			]
+		},
+		"avatar.air_woosh": {
+			"category": "ui",
+			"sounds": [
+				"sounds/air_woosh"
+			]
+		},
+		"avatar.air_tornado": {
+			"category": "ui",
+			"sounds": [
+				"sounds/air_tornado"
+			]
+		},
+		"avatar.air_rush": {
+			"category": "ui",
+			"sounds": [
+				"sounds/air_rush"
+			]
+		},
+		"avatar.air_rush_end": {
+			"category": "ui",
+			"sounds": [
+				"sounds/air_rush_end"
+			]
+		},
+		"avatar.debris": {
+			"category": "ui",
+			"sounds": [
+				"sounds/debris"
+			]
+		},
+		"avatar.earth_shockwave": {
+			"category": "ui",
+			"sounds": [
+				"sounds/earth_shockwave"
+			]
+		},
+		"avatar.rock_collect": {
+			"category": "ui",
+			"sounds": [
+				"sounds/rock_collect"
+			]
+		},
+		"avatar.rock_punch": {
+			"category": "ui",
+			"sounds": [
+				"sounds/rock_punch"
+			]
+		},
+		"avatar.earth_raise": {
+			"category": "ui",
+			"sounds": [
+				"sounds/earth_raise",
+				"sounds/earth_raise_1"
+			]
+		},
+		"avatar.earth_rend": {
+			"category": "ui",
+			"sounds": [
+				"sounds/earth_rend"
+			]
+		},
+		"avatar.earth_spikes": {
+			"category": "ui",
+			"sounds": [
+				"sounds/earth_spikes"
+			]
+		},
+		"avatar.earth_charge": {
+			"category": "ui",
+			"sounds": [
+				"sounds/earth_charge"
+			]
+		},
+		"avatar.earth_big_spike": {
+			"category": "ui",
+			"sounds": [
+				"sounds/earth_big_spike"
+			]
+		},
+		"avatar.magma_surge": {
+			"category": "ui",
+			"sounds": [
+				"sounds/magma_surge"
+			]
+		},
+		"avatar.fire_blast": {
+			"category": "ui",
+			"sounds": [
+				"sounds/fire_blast"
+			]
+		},
+		"avatar.flame_wave": {
+			"category": "ui",
+			"sounds": [
+				"sounds/flame_wave"
+			]
+		},
+		"avatar.fire_woosh": {
+			"category": "ui",
+			"sounds": [
+				"sounds/fire_woosh"
+			]
+		},
+		"avatar.fire_swish": {
+			"category": "ui",
+			"sounds": [
+				"sounds/fire_swish"
+			]
+		},
+		"avatar.fire_sprint": {
+			"category": "ui",
+			"sounds": [
+				"sounds/fire_sprint"
+			]
+		},
+		"avatar.lightning_impact": {
+			"category": "ui",
+			"sounds": [
+				"sounds/lightning_impact"
+			]
+		},
+		"avatar.lightning_charge": {
+			"category": "ui",
+			"sounds": [
+				"sounds/lightning_charge"
+			]
+		},
+		"avatar.lightning_sweep": {
+			"category": "ui",
+			"sounds": [
+				"sounds/lightning_sweep"
+			]
+		},
+		"avatar.thunderclap": {
+			"category": "ui",
+			"sounds": [
+				"sounds/thunderclap"
+			]
+		},
+		"avatar.lightning_burst": {
+			"category": "ui",
+			"sounds": [
+				"sounds/lightning_burst"
+			]
+		},
+		"avatar.water_blast": {
+			"category": "ui",
+			"sounds": [
+				"sounds/water_blast"
+			]
+		},
+		"avatar.water_rush": {
+			"category": "ui",
+			"sounds": [
+				"sounds/water_rush"
+			]
+		},
+		"avatar.water_charge": {
+			"category": "ui",
+			"sounds": [
+				"sounds/water_charge"
+			]
+		},
+		"avatar.freeze": {
+			"category": "ui",
+			"sounds": [
+				"sounds/freeze"
+			]
+		},
+		"avatar.ice_form": {
+			"category": "ui",
+			"sounds": [
+				"sounds/ice_form"
+			]
+		},
+		"avatar.water_splash": {
+			"category": "ui",
+			"sounds": [
+				"sounds/water_splash"
+			]
+		},
+		"avatar.swing": {
+			"category": "ui",
+			"sounds": [
+				"sounds/swing",
+                "sounds/swing1"
+			]
+		},
+		"avatar.part_block": {
+			"category": "ui",
+			"sounds": [
+				"sounds/part_block"
+			]
+		},
+		"avatar.perfect_block": {
+			"category": "ui",
+			"sounds": [
+				"sounds/perfect_block"
+			]
+		}
+	}
+}

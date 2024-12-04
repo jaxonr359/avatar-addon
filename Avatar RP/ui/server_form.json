@@ -1,0 +1,180 @@
+{
+  "third_party_server_screen@common.base_screen": {
+    "$screen_animations": [
+      "@server_form.exit_wait"
+    ],
+    "$background_animations": [
+      "@server_form.exit_wait"
+    ],
+    "force_render_below": true,
+    "low_frequency_rendering": true,
+    "load_screen_immediately": true,
+    "render_only_when_topmost": false,
+    "render_game_behind": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+
+  "exit_wait": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 0.08,
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+
+  "c_custom_form": {
+    "type": "panel",
+    "$title_text": "#title_text", // For forms
+    "bindings": [
+      {
+        "binding_name": "#title_text"
+      }
+    ],
+    "controls": [
+      {
+        "default_modal_form@glui_common.glui_dialog_form": {
+          "$dialog_content": "glui_default_modal_form.default_modal_form_content",
+          "offset": [
+            -3,
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_custom_form",
+              "source_property_name": "(not ((#title_text - $glitch_default_modal_form) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "c_long_form": {
+    "type": "panel",
+    "$title_text": "#title_text", // For forms
+    "bindings": [
+      {
+        "binding_name": "#title_text"
+      }
+    ],
+    "controls": [
+      {
+        "skill_tree@glui_common.glui_dialog": {
+          "$dialog_content": "glui_skill_tree.skill_tree_content",
+          "offset": [
+            -16,
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_long_form",
+              "source_property_name": "(not ((#title_text - $glitch_skill_tree_form) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "tutorial_form@glui_common.glui_tutorial_dialog": {
+          "$dialog_content": "glui_tutorial_form.tutorial_form_content",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_long_form",
+              "source_property_name": "(not ((#title_text - $glitch_tutorial_form) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "container_slots@glui_common.glui_dialog": {
+          "$dialog_content": "glui_container_slots.container_slots_content",
+          "$is_dialog_right_tabs": true, // For the right tabs
+          "offset": [
+            13,
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_long_form",
+              "source_property_name": "(not ((#title_text - $glitch_container_slots_form) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "grid_2_row@glui_common.glui_dialog": {
+          "$dialog_content": "grid_2_row.grid_2_row_content",
+          "offset": [
+            -16,
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_long_form",
+              "source_property_name": "(not ((#title_text - $glitch_grid2row_form) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "default_form@glui_common.glui_dialog": {
+          "$dialog_content": "glui_default_form.default_form_content",
+          "offset": [
+            -16,
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_long_form",
+              "source_property_name": "(not ((#title_text - $glitch_default_form) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "main_screen_content": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "server_form_factory": {
+          "type": "factory",
+          "control_ids": {
+            "long_form": "@server_form.c_long_form",
+            "custom_form": "@server_form.c_custom_form"
+          }
+        }
+      }
+    ]
+  }
+}

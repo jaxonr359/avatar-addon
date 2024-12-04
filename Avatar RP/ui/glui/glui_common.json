@@ -1,0 +1,659 @@
+{
+  "namespace": "glui_common",
+
+  /****************************************
+                   GENERAL
+  ****************************************/
+
+  "dialog_bg": {
+    "type": "image",
+    "texture": "textures/ui/glui/dialog_background"
+  },
+
+  "dialog_title_bg": {
+    "type": "image",
+    "texture": "textures/ui/glui/dialog_title_background"
+  },
+
+  "dialog_tutorial_bg": {
+    "type": "image",
+    "texture": "textures/ui/glui/dialog_tutorial_background"
+  },
+
+  "padding": {
+    "type": "panel",
+    "size": "$padding"
+  },
+
+  "divider": {
+    "type": "image",
+    "texture": "textures/ui/glui/divider"
+  },
+
+  "icon": {
+    "$icon_color|default": [ 0, 0, 0 ],
+
+    "type": "image",
+    "texture": "$icon",
+
+    "size": [ 16, 16 ],
+    "color": "$icon_color"
+  },
+
+  "scrollbar_handle": {
+    "type": "image",
+    "texture": "textures/ui/glui/scroll_handle"
+  },
+
+  "scrollbar_track": {
+    "type": "image",
+    "texture": "textures/ui/glui/scroll_track"
+  },
+
+  "default_scrollbar@common.scrolling_panel": {
+    "$scroll_box_touch_image_control": "glui_common.scrollbar_handle",
+    "$scroll_box_mouse_image_control": "glui_common.scrollbar_handle",
+    "$scroll_track_image_control": "glui_common.scrollbar_track"
+  },
+
+  /****************************************
+                   TABS
+  - Is usable both left and right direction
+  ****************************************/
+
+  "glui_left_and_right_tab": {
+    "type": "panel",
+
+    "$tab_view|default": "tabs",
+    "$tab_panel|default": "glui_common.glui_button_panel",
+    "$pressed_toggle_name|default": "button.menu_select",
+
+    "$is_checked|default": false,
+    "$is_hovered|default": false,
+
+    "$is_right_tab|default": false,
+    "$tab_bindings|default": [],
+
+    "$unchecked_texture|default": "textures/ui/glui/tabs/tab_unselected_left_default",
+    "$unchecked_hover_texture|default": "textures/ui/glui/tabs/tab_unselected_left_hovered",
+    "$checked_texture|default": "textures/ui/glui/tabs/tab_selected_left",
+    "$checked_hover_texture|default": "textures/ui/glui/tabs/tab_selected_left",
+
+    "variables": [
+      {
+        "requires": "$is_right_tab",
+        "$checked_texture": "textures/ui/glui/tabs/tab_selected_right",
+        "$checked_hover_texture": "textures/ui/glui/tabs/tab_selected_right",
+        "$unchecked_texture": "textures/ui/glui/tabs/tab_unselected_right_default",
+        "$unchecked_hover_texture": "textures/ui/glui/tabs/tab_unselected_right_hovered"
+      }
+    ],
+
+    "controls": [
+      {
+        "$tab_view@common.toggle": {
+          "reset_on_focus_lost": true,
+
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "$pressed_toggle_name",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "$pressed_toggle_name",
+              "mapping_type": "focused"
+            }
+          ],
+
+          "bindings": "$tab_bindings",
+
+          "controls": [
+            {
+              "unchecked@$tab_panel": {
+                "$button_texture": "$unchecked_texture"
+              }
+            },
+            {
+              "unchecked_hover@$tab_panel": {
+                "$button_texture": "$unchecked_hover_texture",
+                "$is_hovered": true
+              }
+            },
+            {
+              "checked@$tab_panel": {
+                "$button_texture": "$checked_texture",
+                "$is_checked": true
+              }
+            },
+            {
+              "checked_hover@$tab_panel": {
+                "$button_texture": "$checked_hover_texture",
+                "$is_checked": true,
+                "$is_hovered": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /****************************************
+                  BUTTONS
+  ****************************************/
+
+  "glui_button_label": {
+    "type": "label",
+    "text": "$button_text",
+
+    "text_alignment": "center",
+    "layer": 10, // To show the text when button is hovered
+    
+    "$button_label_collection|default": "form_buttons",
+    "$button_label_binding_type|default": "collection",
+    
+    "size": [ "100% - 2px", "default" ],
+    "max_size": [ "100% - 2px", "100% - 4px" ],
+    "color": [ 1, 1, 1 ],
+
+    "bindings": [
+      {
+        "binding_name": "$button_text",
+        "binding_collection_name": "$button_label_collection",
+        "binding_type": "$button_label_binding_type"
+      }
+    ]
+  },
+
+  "glui_button_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+
+    "$button_content_size|default": [ "100% - 4px", "100% - 4px" ],
+    "$button_content|default": "common.empty_panel",
+    "$button_content_offset|default": [ 0, 0 ],
+    "$button_border_visible|default": false,
+
+    "controls": [
+      {
+        "button_image": {
+          "type": "image",
+          "texture": "$button_texture",
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "button_content_panel": {
+          "type": "panel",
+          "size": "$button_content_size",
+          "offset": "$button_content_offset",
+
+          "controls": [
+            { "button_content@$button_content": {} }
+          ]
+        }
+      },
+      {
+        "border": {
+          "type": "image",
+          "texture": "textures/ui/focus_border_white",
+
+          "size": [ "100%", "100%" ],
+          "ignored": "(not $button_border_visible)"
+        }
+      }
+    ]
+  },
+
+  "glui_light_button@common.button": {
+    "$button_panel": "glui_common.glui_button_panel",
+
+    "$default_texture|default": "textures/ui/glui/buttons/light_button_default",
+    "$hover_texture|default": "textures/ui/glui/buttons/light_button_hover",
+    "$pressed_texture|default": "textures/ui/glui/buttons/light_button_pressed",
+
+    "$default_content_offset|default": [ 0, 0 ],
+    "$hover_content_offset|default": [ 0, 0 ],
+    "$pressed_content_offset|default": [ 0, 0 ],
+
+    "$default_border_visible|default": false,
+    "$hover_border_visible|default": false,
+    "$pressed_border_visible|default": false,
+
+    "$is_hover_or_pressed|default": false,
+
+    "controls": [
+      {
+        "default@$button_panel": {
+          "$button_texture": "$default_texture",
+          "$button_content_offset": "$default_content_offset",
+          "$button_border_visible": "$default_border_visible"
+        }
+      },
+      {
+        "hover@$button_panel": {
+          "$button_texture": "$hover_texture",
+          "$button_content_offset": "$hover_content_offset",
+          "$button_border_visible": "$hover_border_visible",
+          "$is_hover_or_pressed": true
+        }
+      },
+      {
+        "pressed@$button_panel": {
+          "$button_texture": "$hover_texture",
+          "$button_content_offset": "$pressed_content_offset",
+          "$button_border_visible": "$pressed_border_visible",
+          "$is_hover_or_pressed": true
+        }
+      }
+    ]
+  },
+
+  "glui_close_button@glui_light_button": {
+    "$pressed_button_name": "button.menu_exit",
+
+    "$button_content": "icon", // No need to put namespace since it's in the same file
+    "$default_content_offset": [ 0, -1 ],
+    "$hover_content_offset": [ 0, -1 ],
+
+    "$icon": "textures/ui/glui/icons/close",
+    "$icon_color": [ 1, 1, 1 ]
+  },
+
+  /****************************************
+            DIALOGS (ACTION FORM)
+  ****************************************/
+
+  "glui_dialog_title_text": {
+    "type": "label",
+    "text": "$title_text",
+    
+    "color": "$dialog_title_text_color",
+    "size": [ "default", "default" ],
+    "max_size": "$dialog_title_size",
+
+    "offset": [ 0, -2 ],
+
+    "font_type": "MinecraftTen",
+    
+    "bindings": [
+      {
+        "binding_type": "$dialog_title_binding_type",
+        "binding_name": "$title_text"
+      }
+    ]
+  },
+
+  "glui_dialog_tutorial_text": {
+    "type": "label",
+    "text": "$title_text",
+    
+    "color": "$dialog_title_text_color",
+    "size": [ "default", "default" ],
+    "max_size": "$dialog_title_size",
+
+    "text_alignment": "center",
+    "anchor_from": "center",
+    "anchor_to": "center",
+
+    "bindings": [
+      {
+        "binding_type": "$dialog_title_binding_type",
+        "binding_name": "$title_text"
+      }
+    ]
+  },
+
+  "glui_dialog_form": {
+    "type": "stack_panel",
+
+    "size": "$general_form_size",
+    "max_size": "$general_form_size",
+
+    "$dialog_content|default": "common.empty_panel",
+
+    "controls": [
+      {
+        "dialog_title_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 24 ],
+
+          "controls": [
+            {
+              "dialog_title@glui_common.dialog_title_bg": {
+                "size": [ "fill", "100%" ],
+
+                "$dialog_title_text_color|default": [ 1, 1, 1 ],
+                "$dialog_title_size|default": [ "100% - 14px", "100% - 2px" ],
+                "$dialog_title_binding_type|default": "global",
+
+                "controls": [
+                  { "glui_dialog_title_text@glui_common.glui_dialog_title_text": {} }
+                ]
+              }
+            },
+            { "padding@glui_common.padding": { "$padding": [ 2, "!00%" ] } },
+            {
+              "close_button@glui_common.glui_close_button": { "size": [ "100%y", "100%" ] }
+            }
+          ]
+        }
+      },
+      { "padding@glui_common.padding": { "$padding": [ "!00%", 2 ] } },
+      { 
+        "dialog_main@glui_common.dialog_bg": {
+          "size": [ "100%", "fill" ],
+
+          "controls": [
+            {
+              "content_panel": {
+                "type": "panel",
+                "size": [ "100% - 14px", "100% - 14px" ],
+
+                "controls": [
+                  { "content@$dialog_content": {} }
+                ]
+              }
+            }
+          ]
+        } 
+      }
+    ]
+  },
+
+  "glui_dialog_form_tutorial@glui_common.dialog_tutorial_bg": {
+    "alpha": 0.7,
+    "size": [ 4480, 4480 ],
+    "max_size": [ 4480, 4480 ],
+
+    "$dialog_content|default": "common.empty_panel",
+
+    "controls": [
+      {
+        "dialog_title_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 104 ],
+
+          "anchor_from": "center",
+          "anchor_to": "center",
+
+          "controls": [
+            {
+              "dialog_title": {
+                "type": "panel",
+                "size": [ "100%", "100%" ],
+
+                "anchor_from": "center",
+                "anchor_to": "center",
+
+                "$dialog_title_text_color|default": [ 1, 1, 1 ],
+                "$dialog_title_size|default": [ "100% - 14px", "100% - 2px" ],
+                "$dialog_title_binding_type|default": "global",
+
+                "controls": [
+                  { "glui_dialog_tutorial_text@glui_common.glui_dialog_tutorial_text": {} },
+                  {
+                    "content_panel": {
+                      "type": "stack_panel",
+                      "size": [ 70, 50 ],
+                      
+                      "offset": [ 0, 40 ],
+
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+      
+                      "controls": [
+                        { "content@$dialog_content": {} }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "padding@glui_common.padding": { "$padding": [ "!00%", 2 ] } },
+      {
+        "dialog_main": {
+          "type": "stack_panel",
+          "size": [ "100%", "fill" ],
+
+          "anchor_from": "center",
+          "anchor_to": "center",
+          
+          "layer": 2,
+
+          "controls": [
+            {
+              "content_panel": {
+                "type": "stack_panel",
+                "size": [ "100% - 14px", "100% - 14px" ],
+
+                "anchor_from": "center",
+                "anchor_to": "center",
+
+                "controls": [
+                  { "content@$dialog_content": {} }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dialog_left_tab_content": {
+    "type": "image",
+    "size": [ "100% - 4px", "100% - 4px" ],
+    "layer": 2, // Add layer because for some reason hovering make content disappear
+
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_collection_name": "form_buttons",
+        "binding_type": "collection"
+      }
+    ]
+  },
+
+  "dialog_left_tab_template@glui_left_and_right_tab": {
+    "size": [ "100%", "100%x - 2px" ],
+
+    "$toggle_name": "left_tabs_navigation",
+    "$pressed_toggle_name": "button.form_button_click",
+    "$button_content": "dialog_left_tab_content", // No need to put namespace since it's in the same file
+
+    "$tab_bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_name": "#form_button_text",
+        "binding_collection_name": "form_buttons",
+        "binding_type": "collection"
+      },
+      {
+        "binding_name": "#form_button_texture",
+        "binding_collection_name": "form_buttons",
+        "binding_type": "collection"
+      },
+      {
+        // Check if the toggle should be on
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - '§p') = #form_button_text)",
+        "target_property_name": "#toggle_state"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#form_button_texture = ''))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "dialog_left_tabs_stack": {
+    "type": "stack_panel",
+    "size": [ 26, "100%c" ],
+
+    "collection_name": "form_buttons",
+    
+    "controls": [
+      { "tab_one@dialog_left_tab_template": { "collection_index": 0 } },
+      { "tab_two@dialog_left_tab_template": { "collection_index": 1 } },
+      { "tab_three@dialog_left_tab_template": { "collection_index": 2 } },
+      { "tab_four@dialog_left_tab_template": { "collection_index": 3 } },
+      { "tab_five@dialog_left_tab_template": { "collection_index": 4 } },
+      { "tab_six@dialog_left_tab_template": { "collection_index": 5 } }
+    ]
+  },
+
+  "dialog_right_tab_template@glui_left_and_right_tab": {
+    "size": [ "100%", 24 ],
+
+    "$toggle_name": "right_tabs_navigation",
+    "$pressed_toggle_name": "button.form_button_click",
+
+    "$button_content": "glui_common.glui_button_label",
+    "$button_text": "#form_button_text",
+
+    "$tab_bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_name": "#form_button_text",
+        "binding_collection_name": "form_buttons",
+        "binding_type": "collection"
+      },
+      {
+        // Check if the toggle should be on
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - '§p') = #form_button_text)",
+        "target_property_name": "#toggle_state"
+      },
+      {
+        "binding_name": "#form_button_text",
+        "binding_collection_name": "form_buttons",
+        "binding_type": "collection"
+      },
+      {
+        "binding_name": "#form_button_texture",
+        "binding_collection_name": "form_buttons",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_texture = '') and (#form_button_text = '')))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "dialog_right_tabs_stack": {
+    "type": "stack_panel",
+    "size": [ 62, "100%c" ],
+
+    "collection_name": "form_buttons",
+    "$is_right_tab": true,
+    
+    "controls": [
+      // These acknowledges the tabs and buttons indices defined at 'container_slots.json'
+      { "tab_one@dialog_right_tab_template": { "collection_index": 9 } },
+      { "tab_two@dialog_right_tab_template": { "collection_index": 10 } },
+      { "tab_three@dialog_right_tab_template": { "collection_index": 11 } },
+      { "tab_four@dialog_right_tab_template": { "collection_index": 12 } },
+      { "tab_five@dialog_right_tab_template": { "collection_index": 13 } },
+      { "tab_six@dialog_right_tab_template": { "collection_index": 14 } }
+    ]
+  },
+
+  "glui_tutorial_dialog": {
+    "type": "panel",
+    "size": [ "100%c", "100%cm" ],
+
+    "$is_dialog_right_tabs|default": false,
+
+    "controls": [
+      {
+        "glui_dialog_form@glui_dialog_form_tutorial": {
+          "$offset": [ 0, 0 ],
+          "$anchors": "top_right",
+
+          "variables": [
+            {
+              "requires": "$is_dialog_right_tabs",
+              "$anchors": "center",
+              "$offset": [ -16, 0 ]
+            }
+          ],
+
+          "offset": "$offset",
+          "anchor_from": "$anchors",
+          "anchor_to": "$anchors"
+        }
+      }
+    ]
+  },
+
+  "glui_dialog": {
+    "type": "panel",
+    "size": [ "100%c", "100%cm" ],
+
+    "$is_dialog_right_tabs|default": false,
+
+    "controls": [
+      {
+        "dialog_left_tabs_stack@dialog_left_tabs_stack": {
+          "$offset": [ 2, 26 ],
+
+          "variables": [
+            {
+              "requires": "$is_dialog_right_tabs",
+              "$offset": [ 4, 26 ]
+            }
+          ],
+
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": "$offset"
+        }
+      },
+      {
+        "glui_dialog_form@glui_dialog_form": {
+          "$offset": [ 0, 0 ],
+          "$anchors": "top_right",
+
+          "variables": [
+            {
+              "requires": "$is_dialog_right_tabs",
+              "$anchors": "center",
+              "$offset": [ -16, 0 ]
+            }
+          ],
+
+          "offset": "$offset",
+          "anchor_from": "$anchors",
+          "anchor_to": "$anchors"
+        }
+      },
+      {
+        "dialog_right_tabs_stack@dialog_right_tabs_stack": {
+          "ignored": "(not $is_dialog_right_tabs)",
+
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ 0, 26 ]
+        }
+      }
+    ]
+  }
+}

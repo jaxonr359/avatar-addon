@@ -1,0 +1,163 @@
+{
+  "namespace": "glui_container_slots",
+
+  "content_template_bg": {
+    "type": "image",
+    "texture": "textures/ui/glui/content_boxer"
+  },
+
+  "content_template@content_template_bg": {
+    "controls": [
+      {
+        "content": {
+          "type": "stack_panel",
+          "size": [ "100% - 6px", "100% - 6px" ],
+
+          "controls": [
+            {
+              "title": {
+                "type": "label",
+                "text": "$title_name",
+
+                "layer": 2,
+                "size": [ "100%", 10 ]
+              }
+            },
+            { "padding@glui_common.padding": { "$padding": [ "100%", 2 ] } },
+            {
+              "scroll@glui_common.default_scrollbar": {
+                "size": [ "100%", "fill" ],
+                
+                "$show_background": false,
+                "$scrolling_content": "glui_container_slots.container_content_template"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "container_content_button": {
+    "type": "panel",
+    "size": [ "100%", 26 ],
+
+    "controls": [
+      {
+        "button@glui_common.glui_light_button": {
+          "size": [ "100%", "100% - 2px" ],
+
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_name": "#form_button_text",
+              "binding_collection_name": "form_buttons",
+              "binding_type": "collection"
+            },
+            {
+              "binding_name": "#form_button_texture",
+              "binding_collection_name": "form_buttons",
+              "binding_type": "collection"
+            },
+            {
+              "binding_name": "#form_button_texture",
+              "binding_name_override": "#texture",
+              "binding_collection_name": "form_buttons",
+              "binding_type": "collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#form_button_texture = '') and (#form_button_text = '')))",
+              "target_property_name": "#visible"
+            }
+          ],
+
+          "$pressed_button_name": "button.form_button_click",
+
+          "$button_text": "#form_button_text",
+          "$button_content": "glui_common.glui_button_label",
+
+          "$default_content_offset": [ 0, -1 ],
+          "$hover_content_offset": [ 0, -1 ]
+        }
+      }
+    ]
+  },
+
+  "container_content_template": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+
+    "$addends|default": 0,
+
+    "collection_name": "form_buttons",
+    "controls": [
+      { "container_content_button@container_content_button": { "collection_index": "(15 + $addends)" } },
+      { "container_content_button@container_content_button": { "collection_index": "(16 + $addends)" } },
+      { "container_content_button@container_content_button": { "collection_index": "(17 + $addends)" } },
+      { "container_content_button@container_content_button": { "collection_index": "(18 + $addends)" } },
+      { "container_content_button@container_content_button": { "collection_index": "(19 + $addends)" } },
+      { "container_content_button@container_content_button": { "collection_index": "(20 + $addends)" } },
+      { "container_content_button@container_content_button": { "collection_index": "(21 + $addends)" } },
+      { "container_content_button@container_content_button": { "collection_index": "(22 + $addends)" } },
+      { "container_content_button@container_content_button": { "collection_index": "(23 + $addends)" } },
+      { "container_content_button@container_content_button": { "collection_index": "(24 + $addends)" } }
+    ]
+  },
+
+  "container_slots_content": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%" ],
+
+    "controls": [
+      {
+        "main_content": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+
+          "size": [ "100%", "fill" ],
+
+          "controls": [
+            {
+              "left_content@content_template": {
+                "size": [ "fill", "100%" ],
+                "$title_name": "scroll.choose_slots.slot"
+              }
+            },
+            { "padding@glui_common.padding": { "$padding": [ 4, "100%" ] } },
+            {
+              "right_content@content_template": {
+                "size": [ "fill", "100%" ],
+                
+                "$title_name": "scroll.choose_slots.binding",
+                "$addends": 10
+              }
+            }
+          ]
+        }
+      },
+      { "padding@glui_common.padding": { "$padding": [ "!00%", 2 ] } },
+      { "divider@glui_common.divider": { "size": [ "100%", 2 ] } },
+      {
+        "buttons_content": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 26 ],
+
+          "collection_name": "form_buttons",
+
+          "controls": [
+            // The collection indices of these buttons acknowledges tabs indices
+            // We used skill tree template for practical reasons
+            { "button_one@glui_skill_tree.buttons_template": { "collection_index": 6 } },
+            { "button_two@glui_skill_tree.buttons_template": { "collection_index": 7 } },
+            { "button_three@glui_skill_tree.buttons_template": { "collection_index": 8 } }
+          ]
+        }
+      }
+    ]
+  }
+}

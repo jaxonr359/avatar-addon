@@ -1,0 +1,62 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "a:dragon_of_the_west",
+			"basic_render_parameters": {
+				"material": "particles_add",
+				"texture": "textures/particle/particles"
+			}
+		},
+		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "variable.size = 0.5;variable.plane;variable.lifetime = 1;"
+			},
+			"minecraft:emitter_local_space": {
+				"position": true,
+				"rotation": true
+			},
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 48
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_sphere": {
+				"radius": 0.15,
+				"surface_only": true,
+				"direction": "outwards"
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 1
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation_rate": "Math.random(-100, 100)"
+			},
+			"minecraft:particle_initial_speed": 1,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": ["variable.plane.x * 40", "variable.plane.y * 40", "variable.plane.z * 40"]
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["variable.size*(variable.particle_random_1*variable.lifetime-variable.particle_age)", "variable.size*(variable.particle_random_1*variable.lifetime-variable.particle_age)"],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [4, 2],
+					"uv_size": [4, 4]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "v.particle_age / v.particle_lifetime",
+					"gradient": {
+						"0.0": "#FFFFF201",
+						"0.19": "#FFE48405",
+						"0.42": "#FFFF0101"
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,207 @@
+{
+  "namespace": "grid_2_row",
+
+  "grid_2_row_content": {
+    "type": "stack_panel",
+    "size": [ "100% - 6px", "100%" ],
+
+    "controls": [
+      {
+        "scroll@glui_common.default_scrollbar": {
+          "size": [ "100%", "fill" ],
+
+          "$show_background": false,
+          "$scrolling_content": "grid_2_row.grid_2_row_stack"
+        }
+      }
+      // { "padding@glui_common.padding": { "$padding": [ "!00%", 2 ] } },
+      // { "divider@glui_common.divider": { "size": [ "100%", 2 ] } },
+      // {
+      //   "buttons_content": {
+      //     "type": "collection_panel",
+      //     "size": [ "100%", 26 ],
+
+      //     "collection_name": "form_buttons",
+
+      //     "controls": [
+      //       // The collection index of this button acknowledges tabs indices
+      //       // We used skill tree template for practical reasons
+      //       { 
+      //         "button_one@glui_skill_tree.buttons_template": { 
+      //           "collection_index": 6,
+      //           "size": [ "60%", "100%" ]
+      //         } 
+      //       }
+      //     ]
+      //   }
+      // }
+    ]
+  },
+
+  "grid_2_row_button_content": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%" ],
+
+    "controls": [
+      {
+        "thumbnail_panel": {
+          "type": "panel",
+          "size": [ "100%", "fill" ],
+          
+          "controls": [
+            {
+              "thumbnail_boxer": {
+                "type": "panel",
+
+                "size": [ "80%", "75%" ],
+                "offset": [ 0, 2 ],
+
+                "controls": [
+                  {
+                    "thumbnail": {
+                      "type": "image",
+                      "size": [ "100% - 2px", "100% - 2px" ],
+
+                      "bindings": [
+                        {
+                          "binding_name": "#form_button_texture",
+                          "binding_name_override": "#texture",
+                          "binding_collection_name": "form_buttons",
+                          "binding_type": "collection"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "padding@glui_common.padding": { "$padding": [ "!00%", 2 ] } },
+      {
+        "divider_panel": {
+          "type": "panel",
+          "size": [ "100%", 2 ],
+
+          "controls": [
+            { "divider@glui_common.divider": { "size": [ "100% - 4px", "100%" ] } }
+          ]
+        }
+      },
+      {
+        "description": {
+          "type": "panel",
+          "size": [ "100%", 16 ],
+          
+          "controls": [
+            {
+              "description_label": {
+                "type": "label",
+
+                "text": "#text",
+                "font_scale_factor": 1,
+                "text_alignment": "center",
+
+                "size": [ "100% - 6px", "default" ],
+                "max_size": [ "100% - 4px", "100% - 4px" ],
+
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 3, 2 ],
+
+                "bindings": [
+                  {
+                    "binding_name": "#form_button_text",
+                    "binding_name_override": "#text",
+                    "binding_collection_name": "form_buttons",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  // MAKE A FAKE GRID
+
+  "grid_2_row_button": {
+    "type": "panel",
+    "size": [ "33%", 74 ],
+
+    "controls": [
+      {
+        "button@glui_common.glui_light_button": {
+          "size": [ "100% - 4px", "100% - 4px" ],
+
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "form_buttons"
+            }
+          ],
+
+          "$pressed_button_name": "button.form_button_click",
+          "$hover_border_visible": true,
+
+          "$button_content": "grid_2_row.grid_2_row_button_content",
+          "$button_content_size": [ "100%", "100%" ],
+
+          "$default_texture": "textures/ui/glui/forms/card_bg",
+          "$hover_texture": "textures/ui/glui/forms/card_bg",
+          "$pressed_texture": "textures/ui/glui/forms/card_bg"
+        }
+      }
+    ],
+
+    "bindings": [
+      {
+        "binding_name": "#form_button_text",
+        "binding_collection_name": "form_buttons",
+        "binding_type": "collection"
+      },
+      {
+        "binding_name": "#form_button_texture",
+        "binding_collection_name": "form_buttons",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_texture = '') and (#form_button_text = '')))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // Due to some visual bugs i decided not to use full grid
+  // So i had to fake it using stack panels
+
+  "grid_2_row_stack_child": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "100%cm" ],
+
+    "collection_name": "form_buttons",
+    "controls": [
+      { "first_button@grid_2_row_button": { "collection_index": "(6 + $addend)" } },
+      { "second_button@grid_2_row_button": { "collection_index": "(7 + $addend)" } },
+      { "third_button@grid_2_row_button": { "collection_index": "(8 + $addend)" } }
+    ]
+  },
+  
+  "grid_2_row_stack": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+
+    "controls": [
+      { "row1@grid_2_row_stack_child": { "$addend": 0 } },
+      { "row2@grid_2_row_stack_child": { "$addend": 3 } },
+      { "row3@grid_2_row_stack_child": { "$addend": 6 } },
+      { "row4@grid_2_row_stack_child": { "$addend": 9 } },
+      { "row5@grid_2_row_stack_child": { "$addend": 12 } }
+    ]
+  }
+}

@@ -1,0 +1,622 @@
+{
+  "namespace": "glui_skill_tree",
+
+  "buttons_template": {
+    "type": "panel",
+    "size": [ "33.33%", "100%" ],
+
+    "controls": [
+      {
+        "button@glui_common.glui_light_button": {
+          "size": [ "100% - 2px", "100% - 2px" ],
+
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "form_buttons"
+            }
+          ],
+
+          "$pressed_button_name": "button.form_button_click",
+
+          "$button_text": "#form_button_text",
+          "$button_content": "glui_common.glui_button_label",
+
+          "$default_content_offset": [ 0, -1 ],
+          "$hover_content_offset": [ 0, -1 ]
+        }
+      }
+    ]
+  },
+
+  "hover_control": {
+		"type": "panel",
+		"size": [
+			"100%c",
+			"100%c"
+		],
+		"controls": [
+			{
+				"hovering_image": {
+					"type": "panel",
+					"size": [
+						22,
+						22
+					],
+					"controls": [
+						{
+							"item_details": {
+								"type": "custom",
+								"renderer": "hover_text_renderer",
+								"allow_clipping": false,
+								"layer": 30,
+								"bindings": [
+									{
+										"binding_name": "#form_button_text",
+										"binding_type": "collection",
+										"binding_collection_name": "form_buttons"
+									},
+									{
+			
+										"binding_type": "view",
+										"source_property_name": "#form_button_text",
+										"target_property_name": "#hover_text"
+									},
+									{
+			
+										"binding_type": "collection_details",
+										"binding_collection_name": "form_buttons"
+									}
+								]
+							}
+						},
+            {
+							"focus_border": {
+								"type": "image",
+								"size": [
+									23,
+									23
+								],
+                "offset": [ 0, 0.2 ],
+								"texture": "$hover_texture",
+								"layer": 1
+							}
+						},
+            {
+              "icon": {
+                "type": "image",
+                "size": [ 21, 21 ],
+                "layer": 2,
+
+                "bindings": [
+                  {
+                    "binding_name": "#form_button_texture",
+                    "binding_name_override": "#texture",
+                    "binding_collection_name": "form_buttons",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
+            }
+					]
+				}
+			}
+		]
+	},
+
+  "skill_tree_content": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%" ],
+
+    "controls": [
+      {
+        "main_content": {
+          "type": "panel",
+          "size": [ "100%", "fill" ],
+
+          "controls": [
+            { "skill_tree_buttons@skill_tree_buttons": {} },
+            { "skill_tree_paths@skill_tree_paths": {}},
+            {
+              "label_panel": {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "type": "image",
+                "size": [ "100%c + 18px", "100%c + 12px" ],
+                "offset": [0, -105],
+                "texture": "textures/ui/glui/dialog_title_background",
+                "alpha": 1,
+                "controls": [
+                  {
+                    "actionbar_message": {
+                      "type": "label",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "color": [1, 1, 1],
+                      "text": "#form_text"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#title_text - '§c') = #title_text))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "padding@glui_common.padding": { "$padding": [ "!00%", 2 ] } },
+      { "divider@glui_common.divider": { "size": [ "100%", 2 ] } },
+      {
+        "buttons_content": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 26 ],
+
+          "collection_name": "form_buttons",
+
+          "controls": [
+            // The collection indices of these buttons acknowledges tabs indices
+            { "button_one@buttons_template": { "collection_index": 6 } },
+            { "button_two@buttons_template": { "collection_index": 7 } },
+            { "button_three@buttons_template": { "collection_index": 8 } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "skill_tree_button_icon": {
+    "type": "panel",
+
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "size": [ 21, 21 ],
+
+          "bindings": [
+            {
+              "binding_name": "#form_button_texture",
+              "binding_name_override": "#texture",
+              "binding_collection_name": "form_buttons",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "skill_tree_button_template@glui_common.glui_light_button": {
+    "size": [ 21, 21 ],
+
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      }
+    ],
+
+    "$pressed_button_name": "button.form_button_click",
+    "$button_content": "glui_skill_tree.skill_tree_button_icon",
+
+    "$hover_border_visible": true,
+
+    "$default_texture": "textures/ui/glui/buttons/skill_tree_button_hide",
+    "$hover_texture": "textures/ui/glui/buttons/skill_tree_button_hover",
+    "$pressed_texture": "textures/ui/glui/buttons/skill_tree_button_hide",
+
+    "controls": [
+      {
+        "default@$button_panel": {
+          "$button_texture": "$default_texture",
+          "$button_content_offset": "$default_content_offset",
+          "$button_border_visible": "$default_border_visible"
+        }
+      },
+      {
+        "pressed@$button_panel": {
+          "$button_texture": "$hover_texture",
+          "$button_content_offset": "$pressed_content_offset",
+          "$button_border_visible": "$pressed_border_visible",
+          "$is_hover_or_pressed": true
+        }
+      },
+      {
+				"hover@glui_skill_tree.hover_control": {}
+			}
+    ]
+  },
+
+  "skill_tree_path_template": {
+    "type": "image",
+    "texture": "textures/ui/glui/forms/skill_tree_path"
+  },  
+
+  "skill_tree_paths": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+
+    "controls": [
+      {
+        "top_middle_path@skill_tree_path_template": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "size": [ "100% - 8px", 3 ],
+          "offset": [ 0, 13 ]
+        }
+      },
+      {
+        "vertical_middle_path@skill_tree_path_template": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "size": [ 3, "70% - 8px" ],
+          "offset": [ 0, 4 ]
+        }
+      },
+      {
+        "vertical_topleft_path@skill_tree_path_template": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+
+          "size": [ 3, "30% - 8px" ],
+          "offset": [ 13, 4 ]
+        }
+      },
+      {
+        "vertical_topright_path@skill_tree_path_template": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+
+          "size": [ 3, "30% - 8px" ],
+          "offset": [ -13, 4 ]
+        }
+      },
+
+      {
+        "vertical_topleft_pathbottom@skill_tree_path_template": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+
+          "size": [ 3, "50% - 8px" ],
+          "offset": [ 13, -4 ]
+        }
+      },
+      {
+        "vertical_topright_pathbottom@skill_tree_path_template": {
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+
+          "size": [ 3, "50% - 8px" ],
+          "offset": [ -13, -4 ]
+        }
+      },
+
+      {
+        "vertical_slightleft_pathbottom@skill_tree_path_template": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+
+          "size": [ 3, "50% - 8px" ],
+          "offset": [ -54, -4 ]
+        }
+      },
+      {
+        "vertical_slightright_pathbottom@skill_tree_path_template": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+
+          "size": [ 3, "50% - 8px" ],
+          "offset": [ 54, -4 ]
+        }
+      },
+
+      
+
+      {
+        "left_middle_path@skill_tree_path_template": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+
+          "size": [ "20%", 3 ],
+          "offset": [ 13, -52 ]
+        }
+      },
+      {
+        "right_middle_path@skill_tree_path_template": {
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+
+          "size": [ "20%", 3 ],
+          "offset": [ -13, -52 ]
+        }
+      },
+
+      {
+        "vertical_quiteleftmiddle_path@skill_tree_path_template": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "size": [ 3, "20%" ],
+          "offset": [ -76.3, 38 ]
+        }
+      },
+      {
+        "vertical_quiterightmiddle_path@skill_tree_path_template": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "size": [ 3, "20%" ],
+          "offset": [ 76.3, 38 ]
+        }
+      },
+
+      {
+        "vertical_slightleftmiddle_path@skill_tree_path_template": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "size": [ 3, "20%" ],
+          "offset": [ -25, 38 ]
+        }
+      },
+      {
+        "vertical_slightrightmiddle_path@skill_tree_path_template": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "size": [ 3, "20%" ],
+          "offset": [ 25, 38 ]
+        }
+      },
+
+
+      {
+        "topvertical_slightrightmiddle_path@skill_tree_path_template": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "size": [ 3, "20%" ],
+          "offset": [ -54, 13 ]
+        }
+      },
+
+      {
+        "topvertical_slightleftmiddle_path@skill_tree_path_template": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "size": [ 3, "20%" ],
+          "offset": [ 54, 13 ]
+        }
+      },
+
+      {
+        "middle_path_left@skill_tree_path_template": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "size": [ "25% - 4px", 3 ],
+          "offset": [ -51, 38 ]
+        }
+      },
+      {
+        "middle_path_right@skill_tree_path_template": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+
+          "size": [ "25% - 4px", 3 ],
+          "offset": [ 51, 38 ]
+        }
+      },
+      
+      {
+        "vertical_quiteleftbottommiddle_path@skill_tree_path_template": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+
+          "size": [ 3, "50%" ],
+          "offset": [ -25, -4 ]
+        }
+      },
+      {
+        "vertical_quiterightbottommiddle_path@skill_tree_path_template": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+
+          "size": [ 3, "50%" ],
+          "offset": [ 25, -4 ]
+        }
+      }
+    ]
+  },
+
+  "skill_tree_buttons": {
+    "type": "collection_panel",
+    "size": [ "100%", "100%" ],
+
+    "collection_name": "form_buttons",
+
+    "controls": [
+      // The collection indices of these buttons acknowledges tabs and buttons indices
+      {
+        "button_one@skill_tree_button_template": {
+          "collection_index": 9,
+ 
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 4 ]
+        }
+      },
+      {
+        "button_two@skill_tree_button_template": {
+          "collection_index": 10,
+ 
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 54, 29 ]
+        }
+      },
+      {
+        "button_three@skill_tree_button_template": {
+          "collection_index": 11,
+ 
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ -25, 54 ]
+        }
+      },
+      {
+        "button_four@skill_tree_button_template": {
+          "collection_index": 12,
+ 
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, 4 ]
+        }
+      },
+      {
+        "button_five@skill_tree_button_template": {
+          "collection_index": 13,
+ 
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 4, 4 ]
+        }
+      },
+      {
+        "button_six@skill_tree_button_template": {
+          "collection_index": 14,
+ 
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -4, -4 ]
+        }
+      },
+      {
+        "button_seven@skill_tree_button_template": {
+          "collection_index": 15,
+ 
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, 29 ]
+        }
+      },
+      {
+        "button_eight@skill_tree_button_template": {
+          "collection_index": 16,
+ 
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 4, -4 ]
+        }
+      },
+      {
+        "button_nine@skill_tree_button_template": {
+          "collection_index": 17,
+ 
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 4, 29 ]
+        }
+      },
+      {
+        "button_ten@skill_tree_button_template": {
+          "collection_index": 18,
+ 
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 29 ]
+        }
+      },
+      {
+        "button_eleven@skill_tree_button_template": {
+          "collection_index": 19,
+ 
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -26, 54 ]
+        }
+      },
+      {
+        "button_twelve@skill_tree_button_template": {
+          "collection_index": 20,
+ 
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ -54, 29 ]
+        }
+      },
+      {
+        "button_thirteen@skill_tree_button_template": {
+          "collection_index": 21,
+ 
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -23 ]
+        }
+      },
+      {
+        "button_fourteen@skill_tree_button_template": {
+          "collection_index": 22,
+ 
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 25, 54 ]
+        }
+      },
+      {
+        "button_fifteen@skill_tree_button_template": {
+          "collection_index": 23,
+ 
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 26, 54 ]
+        }
+      },
+      {
+        "button_sixteen@skill_tree_button_template": {
+          "collection_index": 24,
+ 
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 25, -4 ]
+        }
+      },
+      {
+        "button_seventeen@skill_tree_button_template": {
+          "collection_index": 25,
+ 
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ -25, -4 ]
+        }
+      },
+      {
+        "button_eighteen@skill_tree_button_template": {
+          "collection_index": 26,
+ 
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 54, -4 ]
+        }
+      },
+      {
+        "button_nineteen@skill_tree_button_template": {
+          "collection_index": 27,
+ 
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ -54, -4 ]
+        }
+      }
+    ]
+  }
+}

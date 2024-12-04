@@ -1,0 +1,14 @@
+{
+  "version": "0.3.0",
+  "configurations": [
+    {
+      "type": "minecraft-js",
+      "request": "attach",
+      "name": "Debug with Minecraft",
+      "mode": "listen",
+      "targetModuleUuid": "705491d6-aeab-41fb-8ca6-2a89617e7f60",
+      "localRoot": "${workspaceFolder}/scripts/avatar/",
+      "port": 19144
+   }
+  ]
+}

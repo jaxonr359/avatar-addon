@@ -1,0 +1,44 @@
+
+{
+  "avatar_logo": {
+     "type": "image",
+     "texture": "textures/ui/avatar/avatar_logo",
+     "anchor_from": "top_right",
+     "anchor_to": "top_right",
+     "offset": [-5, 5],
+     "size": [11, 11],
+     "layer": 3
+  },
+  
+  "label_panel": {
+    "type": "panel",
+    "size": [ "100%", 16 ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "controls": [
+      {
+        "label": {
+          "type": "label",
+          "text": "Avatar Addon 1.0.2 - GlitchyTurtle",
+          "font_scale_factor": 0.6,
+          "text_alignment": "right",
+          "size": [ "100% - 6px", "default" ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -4, -4 ]
+        }
+      }
+    ]
+  },
+  "content_panel": {
+    "type": "panel",
+    "controls": [
+      { 
+        "avatar_logo@debug_screen.avatar_logo": {} 
+      },
+      { 
+        "label_panel@debug_screen.label_panel": {} 
+      }
+    ]
+  }
+}

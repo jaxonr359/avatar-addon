@@ -1,0 +1,160 @@
+{
+  "namespace": "glui_default_form",
+
+  "default_form_content@glui_common.default_scrollbar": {
+    "size": [ "100%", "100%" ],
+    
+    "$show_background": false,
+    "$scrolling_content": "glui_default_form.default_form_scrolling_content"
+  },
+
+  "default_form_scrolling_content": {
+    "type": "stack_panel",
+    "size": [ "95%", "100%c" ],
+    "offset": [ "2.5%", 0 ],
+
+    "controls": [
+      {
+        "form_text_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c + 2px" ],
+
+          "bindings": [
+            { "binding_name": "#form_text" },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#form_text = ''))",
+              "target_property_name": "#visible"
+            }
+          ],
+
+          "controls": [
+            {
+              "form_text": {
+                "type": "label",
+                "text": "#form_text",
+
+                "size": [ "96%", "default" ],
+
+                "bindings": [
+                  { "binding_name": "#form_text" }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      { "padding@glui_common.padding": { "$padding": [ "!00%", 2 ] } },
+      { "default_form_buttons_factory@default_form_buttons_factory": {} }
+    ]
+  },
+
+  "default_form_button": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+
+    "size": [ "100%", 32 ],
+
+    "controls": [
+      {
+        "image_panel": {
+          "type": "panel",
+          "size": [ 32, "100%" ],
+
+          "bindings": [
+            {
+              "binding_name": "#form_button_texture",
+              "binding_collection_name": "form_buttons",
+              "binding_type": "collection"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#form_button_texture = ''))",
+              "target_property_name": "#visible"
+            }
+          ],
+
+          "controls": [
+            {
+              "image": {
+                "type": "image",
+                "size": [ "100% - 4px", "100% - 4px" ],
+
+                "bindings": [
+                  {
+                    "binding_name": "#form_button_texture",
+                    "binding_name_override": "#texture",
+                    "binding_collection_name": "form_buttons",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "button@glui_common.glui_light_button": {
+          "size": [ "fill", "100% - 2px" ],
+
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "form_buttons"
+            }
+          ],
+
+          "$pressed_button_name": "button.form_button_click",
+
+          "$button_text": "#form_button_text",
+          "$button_content": "glui_common.glui_button_label",
+
+          "$default_content_offset": [ 0, -1 ],
+          "$hover_content_offset": [ 0, -1 ]
+        }
+      }
+    ],
+
+    "bindings": [
+      {
+        "binding_name": "#form_button_text",
+        "binding_collection_name": "form_buttons",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#form_button_text = ''))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "default_form_buttons_factory": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+
+    "collection_name": "form_buttons",
+    "controls": [
+      { "one@default_form_button": { "collection_index": 6 } },
+      { "two@default_form_button": { "collection_index": 7 } },
+      { "three@default_form_button": { "collection_index": 8 } },
+      { "four@default_form_button": { "collection_index": 9 } },
+      { "five@default_form_button": { "collection_index": 10 } },
+      { "six@default_form_button": { "collection_index": 11 } },
+      { "seven@default_form_button": { "collection_index": 12 } },
+      { "eight@default_form_button": { "collection_index": 13 } },
+      { "nine@default_form_button": { "collection_index": 14 } },
+      { "ten@default_form_button": { "collection_index": 15 } },
+      { "eleven@default_form_button": { "collection_index": 16 } },
+      { "twelve@default_form_button": { "collection_index": 17 } },
+      { "thirteen@default_form_button": { "collection_index": 18 } },
+      { "fourteen@default_form_button": { "collection_index": 19 } },
+      { "fifteen@default_form_button": { "collection_index": 20 } },
+      { "sixteen@default_form_button": { "collection_index": 21 } },
+      { "seventeen@default_form_button": { "collection_index": 22 } },
+      { "eighteen@default_form_button": { "collection_index": 23 } },
+      { "nineteen@default_form_button": { "collection_index": 24 } },
+      { "twenty@default_form_button": { "collection_index": 25 } }
+    ]
+  }
+}
